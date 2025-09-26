@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suraj Kumar - Elite Data Science Portfolio</title>
-    <!-- Meta description for better SEO -->
+    <title>Suraj Kumar</title>
     <meta name="description"
         content="The professional portfolio of Suraj Kumar, a Data Scientist and Machine Learning Engineer specializing in AI, ML, and data visualization.">
+    <link rel="icon" type="image/png" href="profile.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- GSAP for advanced animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <style>
@@ -56,7 +55,6 @@
             justify-content: center;
             align-items: center;
             transition: opacity 0.5s ease 1s;
-            /* Delay opacity transition */
         }
 
         .preloader-text {
@@ -115,24 +113,22 @@
 </head>
 
 <body>
-    <!-- Custom Cursor -->
     <div class="cursor hidden md:block"></div>
 
-    <!-- Preloader -->
     <div id="preloader">
         <div class="preloader-text">
             <p class="text-2xl font-bold">Suraj Kumar | Data Science Portfolio</p>
         </div>
     </div>
 
-    <!-- Header -->
     <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="header">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home" class="text-2xl font-bold text-black z-50">SK.</a>
-            <!-- Desktop Navigation -->
+            <a href="#home" class="text-2xl font-bold text-black z-50">Suraj Kumar</a>
             <nav class="hidden md:flex space-x-8 items-center">
                 <a href="#home" class="nav-link text-gray-600 hover:text-black transition-colors">Home</a>
                 <a href="#about" class="nav-link text-gray-600 hover:text-black transition-colors">About</a>
+                <a href="#research" class="nav-link text-gray-600 hover:text-black transition-colors">Research</a>
+                <a href="#education" class="nav-link text-gray-600 hover:text-black transition-colors">Education</a>
                 <a href="#projects" class="nav-link text-gray-600 hover:text-black transition-colors">Projects</a>
                 <a href="#skills" class="nav-link text-gray-600 hover:text-black transition-colors">Skills</a>
                 <a href="#contact" class="nav-link text-gray-600 hover:text-black transition-colors">Contact</a>
@@ -141,12 +137,10 @@
                 class="hidden md:block bg-black hover:bg-gray-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors">Contact
                 Me</a>
 
-            <!-- Mobile Menu Button -->
             <button id="mobile-menu-button" class="md:hidden z-50">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
-        <!-- Mobile Navigation Menu -->
         <div id="mobile-menu"
             class="absolute top-0 left-0 w-full h-screen bg-white transform -translate-x-full md:hidden">
             <nav class="flex flex-col items-center justify-center h-full space-y-8">
@@ -154,6 +148,10 @@
                     class="mobile-nav-link text-2xl text-gray-700 hover:text-black transition-colors">Home</a>
                 <a href="#about"
                     class="mobile-nav-link text-2xl text-gray-700 hover:text-black transition-colors">About</a>
+                <a href="#research"
+                    class="mobile-nav-link text-2xl text-gray-700 hover:text-black transition-colors">Research</a>
+                <a href="#education"
+                    class="mobile-nav-link text-2xl text-gray-700 hover:text-black transition-colors">Education</a>
                 <a href="#projects"
                     class="mobile-nav-link text-2xl text-gray-700 hover:text-black transition-colors">Projects</a>
                 <a href="#skills"
@@ -164,9 +162,7 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <!-- Home Section -->
         <section id="home" class="min-h-screen flex items-center bg-gray-100 hero-pattern">
             <div class="container mx-auto px-6">
                 <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
@@ -186,20 +182,55 @@
             </div>
         </section>
 
-        <!-- About & Education Section -->
         <section id="about" class="py-24 bg-white">
             <div class="container mx-auto px-6 max-w-4xl">
                 <h2 class="gsap-reveal text-4xl font-bold text-center mb-12 text-black">About Me</h2>
-                <p class="gsap-reveal text-lg text-gray-700 mb-6 leading-relaxed text-center">
-                    I'm a dedicated MCA student at UPES specializing in AI & ML, building upon a solid B.Sc. in Data
-                    Science. My passion lies in transforming complex data into actionable insights and intelligent
-                    solutions. I am driven by a problem-solving mindset and a constant desire to learn and innovate in
-                    the AI landscape.
-                </p>
-                <div class="gsap-reveal mt-16">
-                    <h3 class="text-3xl font-bold text-center mb-8 text-black">Education</h3>
+                <p class="gsap-reveal text-lg text-gray-700 mb-6 leading-relaxed text-justify">
+                    I'm a Mca-Aiml student at UPES with a B.Sc. in Data Science, specializing in AI & ML. My passion
+                    lies in
+                    neural networks and machine learning research, where I focus on enhancing model performance,
+                    reducing errors, and advancing the connections within neural networks. Driven by curiosity and a
+                    problem-solving mindset, I aim to push the boundaries of AI, transforming complex data into
+                    intelligent solutions that make a real impact.
+            </div>
+        </section>
+
+        <section id="research" class="py-24 bg-gray-100">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="gsap-reveal text-4xl font-bold mb-16 text-black">Publications & Research</h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="gsap-reveal text-left">
+                        <div class="flex items-start space-x-4">
+                            <div>
+                                <div class="flex items-center justify-center w-12 h-12 bg-white rounded-full">
+                                    <i data-lucide="file-text" class="w-6 h-6 text-black"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-1 text-gray-900">Elevating Large Language Models’
+                                    Comprehensibility with SHAP Values</h3>
+                                <p class="text-gray-500 mb-2">Book Chapter in: Revolutionizing Machine Learning with
+                                    Large Language Models, 2025</p>
+                                <p class="text-gray-700 mb-4 leading-relaxed text-justify">
+                                    This chapter explores the application of SHAP (SHapley Additive exPlanations) values
+                                    to enhance the interpretability and transparency of Large Language Models, making
+                                    complex AI systems more understandable for researchers and practitioners.
+                                </p>
+                                <a href="#" target="_blank" class="font-semibold text-black hover:underline">
+                                    Link (Forthcoming) <i data-lucide="arrow-right" class="inline w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="gsap-reveal">
+                    <h3 class="text-4xl font-bold text-center mb-12 text-black">Education</h3>
                     <div class="relative max-w-2xl mx-auto border-l-2 border-gray-200">
-                        <!-- Timeline Item 1 -->
                         <div class="mb-8 ml-6">
                             <span
                                 class="absolute flex items-center justify-center w-6 h-6 bg-black rounded-full -left-3 ring-8 ring-white">
@@ -208,9 +239,8 @@
                             <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900">Master of Computer
                                 Applications (AI & ML)</h3>
                             <time class="block mb-2 text-sm font-normal leading-none text-gray-500">UPES, Dehradun |
-                                2023 - Present</time>
+                                2024 - Present</time>
                         </div>
-                        <!-- Timeline Item 2 -->
                         <div class="ml-6">
                             <span
                                 class="absolute flex items-center justify-center w-6 h-6 bg-black rounded-full -left-3 ring-8 ring-white">
@@ -219,114 +249,176 @@
                             <h3 class="mb-1 text-lg font-semibold text-gray-900">Bachelor of Science in Data Science
                             </h3>
                             <time class="block mb-2 text-sm font-normal leading-none text-gray-500">Bhagwan Mahavir
-                                University, Surat | 2020 - 2023</time>
+                                University, Surat | 2021 - 2024</time>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
         <section id="projects" class="py-24 bg-gray-100">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="gsap-reveal text-4xl font-bold mb-12 text-black">Featured Projects</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    <!-- Project Card 1 -->
-                    <div
-                        class="gsap-reveal bg-white p-6 rounded-lg shadow-lg border border-gray-200 text-left flex flex-col transition-transform duration-300 hover:-translate-y-2">
-                        <h3 class="text-xl font-bold mb-2">Breast Cancer Prediction System</h3>
-                        <p class="text-gray-600 mb-4 flex-grow">
-                            Developed a Streamlit-based ML app to predict whether a breast tumor is benign or malignant
-                            using the Wisconsin dataset, with interactive sliders and radar chart visualization.
-                        </p>
-                        <div class="mt-auto">
-                            <div class="flex flex-wrap gap-2 mb-4">
+            <div class="container mx-auto px-6">
+                <h2 class="gsap-reveal text-4xl font-bold text-center mb-16 text-black">Featured Projects</h2>
+                <div class="space-y-20">
+
+                    <div class="gsap-reveal grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                        <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-200">
+                            <img src="cancer.png"
+                                onerror="this.onerror=null;this.src='https://placehold.co/1280x720/e5e7eb/111827?text=Project+Screenshot';"
+                                alt="Breast Cancer Prediction System Screenshot" class="rounded-md w-full object-cover">
+                        </div>
+                        <div class="text-left">
+                            <h3 class="text-3xl font-bold mb-3 text-black">Breast Cancer Prediction System</h3>
+                            <p class="text-gray-700 mb-4 leading-relaxed">
+                                Developed a machine learning-powered web application to aid in the early detection of
+                                breast cancer. The system uses a classification model trained on tumor characteristics
+                                to predict whether a growth is benign or malignant. I built an intuitive user interface
+                                with Streamlit, enabling users to input medical measurements and receive instant,
+                                interpretable results, demonstrating a practical application of data science in
+                                healthcare.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
                                 <span
-                                    class="bg-gray-200 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Streamlit</span>
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Streamlit</span>
                                 <span
-                                    class="bg-gray-200 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Scikit-learn</span>
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Scikit-learn</span>
                                 <span
-                                    class="bg-gray-200 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Plotly</span>
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Pandas</span>
+                                <span
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Plotly</span>
                             </div>
-                            <a href="https://github.com/surajksharma7/breast-cancer-prediction-system" target="_blank"
-                                class="font-semibold text-black hover:underline">
-                                View Code <i data-lucide="arrow-right" class="inline w-4 h-4"></i>
-                            </a>
+                            <div class="flex items-center space-x-4">
+                                <a href="https://github.com/surajksharma7/breast-cancer-prediction-system"
+                                    target="_blank"
+                                    class="font-semibold text-black hover:underline inline-flex items-center">
+                                    Live Demo <i data-lucide="external-link" class="ml-1 w-4 h-4"></i>
+                                </a>
+                                <a href="https://github.com/surajksharma7/breast-cancer-prediction-system"
+                                    target="_blank"
+                                    class="font-semibold text-black hover:underline inline-flex items-center">
+                                    Source Code <i data-lucide="github" class="ml-1 w-4 h-4"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Project Card 2 -->
-                    <div
-                        class="gsap-reveal bg-white p-6 rounded-lg shadow-lg border border-gray-200 text-left flex flex-col transition-transform duration-300 hover:-translate-y-2">
-                        <h3 class="text-xl font-bold mb-2">Real-Time Image Recognition API</h3>
-                        <p class="text-gray-600 mb-4 flex-grow">Developed a robust REST API using Flask and TensorFlow
-                            to classify images in real-time with high accuracy.</p>
-                        <div class="mt-auto">
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span
-                                    class="bg-gray-200 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">TensorFlow</span>
-                                <span
-                                    class="bg-gray-200 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Flask</span>
-                                <span
-                                    class="bg-gray-200 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Docker</span>
-                            </div>
-                            <a href="#" class="font-semibold text-black hover:underline">Live Demo <i
-                                    data-lucide="arrow-right" class="inline w-4 h-4"></i></a>
+                    <div class="gsap-reveal grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                        <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-200 md:order-2">
+                            <img src="laptop.png"
+                                onerror="this.onerror=null;this.src='https://placehold.co/1280x720/e5e7eb/111827?text=Project+Screenshot';"
+                                alt="Sales Analysis Dashboard Screenshot" class="rounded-md w-full object-cover">
                         </div>
-                    </div>
-                    <!-- Project Card 3 -->
-                    <div
-                        class="gsap-reveal bg-white p-6 rounded-lg shadow-lg border border-gray-200 text-left flex flex-col transition-transform duration-300 hover:-translate-y-2">
-                        <h3 class="text-xl font-bold mb-2">Sales Analysis Dashboard</h3>
-                        <p class="text-gray-600 mb-4 flex-grow">Created an interactive Power BI dashboard to visualize
-                            sales KPIs and trends, driving data-informed business decisions.</p>
-                        <div class="mt-auto">
-                            <div class="flex flex-wrap gap-2 mb-4">
+                        <div class="text-left md:order-1">
+                            <h3 class="text-3xl font-bold mb-3 text-black">Sales Analysis Dashboard</h3>
+                            <p class="text-gray-700 mb-4 leading-relaxed">
+                                The Laptop Recommendation System is a smart, data-driven web application that helps
+                                users find laptops tailored to their needs. By analyzing technical specifications like
+                                processor, RAM, storage, and GPU, the system converts each laptop into a numerical
+                                vector and calculates similarity scores to provide accurate recommendations. Built with
+                                Python and Streamlit, it offers an interactive, user-friendly interface for exploring
+                                and selecting the best laptops quickly and efficiently.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
                                 <span
-                                    class="bg-gray-200 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Power
-                                    BI</span>
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Python</span>
                                 <span
-                                    class="bg-gray-200 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">DAX</span>
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Streamlit</span>
                                 <span
-                                    class="bg-gray-200 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">SQL</span>
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Data Analysis</span>
+                                <span
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Data
+                                    Modeling</span>
                             </div>
-                            <a href="#" class="font-semibold text-black hover:underline">View Dashboard <i
-                                    data-lucide="arrow-right" class="inline w-4 h-4"></i></a>
+                            <div class="flex items-center space-x-4">
+                                <a href="https://github.com/surajksharma7/Laptop-Recommendation" target="_blank"
+                                    class="font-semibold text-black hover:underline inline-flex items-center">
+                                    Live Demo <i data-lucide="external-link" class="ml-1 w-4 h-4"></i>
+                                </a>
+                                <a href="https://github.com/surajksharma7/Laptop-Recommendation" target="_blank"
+                                    class="font-semibold text-black hover:underline inline-flex items-center">
+                                    Source Code <i data-lucide="github" class="ml-1 w-4 h-4"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Skills & Resume Section -->
         <section id="skills" class="py-24 bg-white">
             <div class="container mx-auto px-6 text-center max-w-4xl">
                 <h2 class="gsap-reveal text-4xl font-bold mb-12 text-black">Skills & Resume</h2>
-                <div class="gsap-reveal grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                <div class="gsap-reveal grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 text-sm">
+
                     <div
-                        class="flex items-center justify-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105">
-                        <i data-lucide="python" class="w-6 h-6 mr-2"></i> Python</div>
+                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        <i data-lucide="python" class="w-6 h-6 mr-2"></i>Python
+                    </div>
                     <div
-                        class="flex items-center justify-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105">
-                        <i data-lucide="brain-circuit" class="w-6 h-6 mr-2"></i> ML</div>
+                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        C++</div>
                     <div
-                        class="flex items-center justify-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105">
-                        <i data-lucide="layers" class="w-6 h-6 mr-2"></i> Deep Learning</div>
+                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        <i data-lucide="database" class="w-6 h-6 mr-2"></i>SQL
+                    </div>
                     <div
-                        class="flex items-center justify-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105">
-                        <i data-lucide="bar-chart-3" class="w-6 h-6 mr-2"></i> Data Viz</div>
+                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        <i data-lucide="brain-circuit" class="w-6 h-6 mr-2"></i>Machine Learning
+                    </div>
                     <div
-                        class="flex items-center justify-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105">
-                        <i data-lucide="table" class="w-6 h-6 mr-2"></i> Pandas</div>
+                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        <i data-lucide="layers" class="w-6 h-6 mr-2"></i>Deep Learning
+                    </div>
                     <div
-                        class="flex items-center justify-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105">
-                        <i data-lucide="database" class="w-6 h-6 mr-2"></i> SQL</div>
+                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        <i data-lucide="sparkles" class="w-6 h-6 mr-2"></i>Generative AI
+                    </div>
                     <div
-                        class="flex items-center justify-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105">
-                        Flask</div>
+                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        <i data-lucide="table" class="w-6 h-6 mr-2"></i>Pandas
+                    </div>
                     <div
-                        class="flex items-center justify-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105">
-                        <i data-lucide="cloud" class="w-6 h-6 mr-2"></i> Cloud</div>
+                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        NumPy</div>
+                    <div
+                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        Scikit-learn</div>
+                    <div
+                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        PyTorch</div>
+                    <div
+                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        Langchain</div>
+                    <div
+                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        <i data-lucide="bar-chart-3" class="w-6 h-6 mr-2"></i>Data Viz
+                    </div>
+                    <div
+                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        Feature Engineering</div>
+                    <div
+                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        Web Scraping</div>
+                    <div
+                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        XGBoost</div>
+                    <div
+                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        NLTK</div>
+                    <div
+                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        MLOps</div>
+                    <div
+                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        Data Cleaning</div>
+                    <div
+                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        Feature Selection</div>
+                    <div
+                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        <i data-lucide="terminal" class="w-6 h-6 mr-2"></i>Linux
+                    </div>
+
                 </div>
                 <a href="Suraj_kumar.pdf" download
                     class="gsap-reveal bg-black hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-full text-lg btn inline-flex items-center transition-colors">
@@ -336,7 +428,6 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="py-24 bg-gray-100">
             <div class="container mx-auto px-6 text-center max-w-2xl">
                 <h2 class="gsap-reveal text-4xl font-bold mb-4 text-black">Get In Touch</h2>
@@ -348,15 +439,12 @@
                     Say Hello
                 </a>
                 <div class="gsap-reveal flex justify-center space-x-6 mt-12">
-                    <!-- GitHub -->
                     <a href="https://github.com/surajksharma7" target="_blank" aria-label="GitHub Profile"
                         class="text-gray-500 hover:text-black transition-transform transform hover:scale-110"><i
                             data-lucide="github" class="w-8 h-8"></i></a>
-                    <!-- LinkedIn -->
                     <a href="#" target="_blank" aria-label="LinkedIn Profile"
                         class="text-gray-500 hover:text-black transition-transform transform hover:scale-110"><i
                             data-lucide="linkedin" class="w-8 h-8"></i></a>
-                    <!-- LeetCode -->
                     <a href="https://leetcode.com/surajksharma7" target="_blank" aria-label="LeetCode Profile"
                         class="text-gray-500 hover:text-black transition-transform transform hover:scale-110">
                         <svg class="w-8 h-8" role="img" viewBox="0 0 24 24" fill="currentColor"
@@ -366,7 +454,6 @@
                                 d="M13.48 4.26l-2.85 2.85 2.85 2.85 2.08-2.08c.6-.6.6-1.56 0-2.15l-.78-.78c-.59-.59-1.55-.59-2.15 0zm-4.33 4.33L6.3 11.44l5.3 5.3 2.85-2.85-5.3-5.3zM2 12l1.41 1.41L12 4.83 10.59 3.41 2 12zm10.59 7.17L12 20.59l8.59-8.59L19.17 10.59 12.59 17.17z" />
                         </svg>
                     </a>
-                    <!-- Codeforces -->
                     <a href="https://codeforces.com/profile/surajksharma7" target="_blank"
                         aria-label="Codeforces Profile"
                         class="text-gray-500 hover:text-black transition-transform transform hover:scale-110">
@@ -378,7 +465,6 @@
                                 d="M4 10a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zM10 6a1 1 0 011-1h2a1 1 0 011 1v8a1 1 0 01-1 1h-2a1 1 0 01-1-1V6zM16 2a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V2z" />
                         </svg>
                     </a>
-                    <!-- Medium -->
                     <a href="https://medium.com/@surajksharma2304" target="_blank" aria-label="Medium Profile"
                         class="text-gray-500 hover:text-black transition-transform transform hover:scale-110">
                         <svg class="w-8 h-8" role="img" viewBox="0 0 24 24" fill="currentColor"
@@ -395,7 +481,7 @@
 
     <footer class="py-6 bg-white">
         <div class="container mx-auto px-6 text-center text-gray-500">
-            <p>&copy; <span id="copyright-year"></span> Suraj Kumar. All Rights Reserved.</p>
+            <p>&copy; <span id="copyright-year">2025</span> Suraj Kumar. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -409,7 +495,7 @@
                 setTimeout(() => {
                     preloader.style.opacity = '0';
                     setTimeout(() => preloader.style.display = 'none', 500);
-                }, 500); // Shorter delay
+                }, 500);
             });
 
             // --- Custom Cursor ---
@@ -428,7 +514,6 @@
             // --- GSAP Animations ---
             gsap.registerPlugin(ScrollTrigger);
 
-            // Animate elements in each section
             document.querySelectorAll('section').forEach(section => {
                 const revealElements = section.querySelectorAll('.gsap-reveal');
                 const revealImages = section.querySelectorAll('.gsap-reveal-img');
@@ -483,11 +568,10 @@
             mobileMenuButton.addEventListener('click', () => {
                 const isExpanded = mobileMenu.classList.toggle('-translate-x-full');
                 mobileMenuButton.innerHTML = isExpanded ? '<i data-lucide="menu"></i>' : '<i data-lucide="x"></i>';
-                lucide.createIcons(); // Re-render icons
+                lucide.createIcons();
                 document.body.style.overflow = isExpanded ? '' : 'hidden';
             });
 
-            // Close mobile menu when a link is clicked
             mobileNavLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.add('-translate-x-full');

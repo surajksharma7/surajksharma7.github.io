@@ -109,6 +109,12 @@
         #mobile-menu {
             transition: transform 0.3s ease-in-out;
         }
+
+        /* Style for the active filter button */
+        .filter-btn.active-filter {
+            background-color: #111827; /* A darker black */
+            color: #ffffff;
+        }
     </style>
 </head>
 
@@ -129,6 +135,7 @@
                 <a href="#about" class="nav-link text-gray-600 hover:text-black transition-colors">About</a>
                 <a href="#research" class="nav-link text-gray-600 hover:text-black transition-colors">Research</a>
                 <a href="#education" class="nav-link text-gray-600 hover:text-black transition-colors">Education</a>
+                <a href="#certifications" class="nav-link text-gray-600 hover:text-black transition-colors">Certifications</a>
                 <a href="#projects" class="nav-link text-gray-600 hover:text-black transition-colors">Projects</a>
                 <a href="#skills" class="nav-link text-gray-600 hover:text-black transition-colors">Skills</a>
                 <a href="#contact" class="nav-link text-gray-600 hover:text-black transition-colors">Contact</a>
@@ -152,6 +159,8 @@
                     class="mobile-nav-link text-2xl text-gray-700 hover:text-black transition-colors">Research</a>
                 <a href="#education"
                     class="mobile-nav-link text-2xl text-gray-700 hover:text-black transition-colors">Education</a>
+                <a href="#certifications"
+                    class="mobile-nav-link text-2xl text-gray-700 hover:text-black transition-colors">Certifications</a>
                 <a href="#projects"
                     class="mobile-nav-link text-2xl text-gray-700 hover:text-black transition-colors">Projects</a>
                 <a href="#skills"
@@ -256,12 +265,46 @@
             </div>
         </section>
 
+        <section id="certifications" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="gsap-reveal text-4xl font-bold text-center mb-12 text-black">Certifications & Courses</h2>
+                <div class="space-y-8">
+                    <!-- Certification Item 1 -->
+                    <div class="gsap-reveal flex items-start space-x-4">
+                        <div>
+                            <div class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md">
+                                <i data-lucide="award" class="w-6 h-6 text-black"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Data Science Mentorship Program 1.0</h3>
+                            <p class="text-gray-500 mb-2">Camopu X</p>
+                            <a href="#" target="_blank" class="font-semibold text-black hover:underline">
+                                View Credential <i data-lucide="external-link" class="inline w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="projects" class="py-24 bg-gray-100">
             <div class="container mx-auto px-6">
-                <h2 class="gsap-reveal text-4xl font-bold text-center mb-16 text-black">Featured Projects</h2>
+                <h2 class="gsap-reveal text-4xl font-bold text-center mb-12 text-black">Featured Projects</h2>
+        
+                <!-- Filter Buttons -->
+                <div id="project-filters" class="gsap-reveal flex flex-wrap justify-center gap-2 md:gap-4 mb-16">
+                    <button data-filter="all" class="filter-btn active-filter bg-black text-white font-semibold py-2 px-5 rounded-full transition-colors">All</button>
+                    <button data-filter="ml" class="filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">Machine Learning</button>
+                    <button data-filter="dl" class="filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">Deep Learning</button>
+                    <button data-filter="nlp" class="filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">NLP / GenAI</button>
+                    <button data-filter="cv" class="filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">Computer Vision</button>
+                    <button data-filter="viz" class="filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">Data Visualization</button>
+                </div>
+        
                 <div class="space-y-20">
-
-                    <div class="gsap-reveal grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <!-- Project 1 -->
+                    <div class="project-item gsap-reveal grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center" data-category="ml viz">
                         <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-200">
                             <img src="cancer.png"
                                 onerror="this.onerror=null;this.src='https://placehold.co/1280x720/e5e7eb/111827?text=Project+Screenshot';"
@@ -278,35 +321,30 @@
                                 healthcare.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span
-                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Streamlit</span>
-                                <span
-                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Scikit-learn</span>
-                                <span
-                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Pandas</span>
-                                <span
-                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Plotly</span>
+                                <span class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Streamlit</span>
+                                <span class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Scikit-learn</span>
+                                <span class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Pandas</span>
+                                <span class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Plotly</span>
                             </div>
                             <div class="flex items-center space-x-4">
                                 <a href="https://github.com/surajksharma7/breast-cancer-prediction-system"
-                                    target="_blank"
-                                    class="font-semibold text-black hover:underline inline-flex items-center">
+                                    target="_blank" class="font-semibold text-black hover:underline inline-flex items-center">
                                     Live Demo <i data-lucide="external-link" class="ml-1 w-4 h-4"></i>
                                 </a>
                                 <a href="https://github.com/surajksharma7/breast-cancer-prediction-system"
-                                    target="_blank"
-                                    class="font-semibold text-black hover:underline inline-flex items-center">
+                                    target="_blank" class="font-semibold text-black hover:underline inline-flex items-center">
                                     Source Code <i data-lucide="github" class="ml-1 w-4 h-4"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-
-                    <div class="gsap-reveal grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+        
+                    <!-- Project 2 -->
+                    <div class="project-item gsap-reveal grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center" data-category="ml nlp">
                         <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-200 md:order-2">
                             <img src="laptop.png"
                                 onerror="this.onerror=null;this.src='https://placehold.co/1280x720/e5e7eb/111827?text=Project+Screenshot';"
-                                alt="Sales Analysis Dashboard Screenshot" class="rounded-md w-full object-cover">
+                                alt="Laptop Recommendation System Screenshot" class="rounded-md w-full object-cover">
                         </div>
                         <div class="text-left md:order-1">
                             <h3 class="text-3xl font-bold mb-3 text-black">Laptop Recommendation System</h3>
@@ -319,14 +357,10 @@
                                 and selecting the best laptops quickly and efficiently.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span
-                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Python</span>
-                                <span
-                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Streamlit</span>
-                                <span
-                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Data Analysis</span>
-                                <span
-                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Data
+                                <span class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Python</span>
+                                <span class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Streamlit</span>
+                                <span class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Data Analysis</span>
+                                <span class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Data
                                     Modeling</span>
                             </div>
                             <div class="flex items-center space-x-4">
@@ -502,8 +536,13 @@
             const cursor = document.querySelector('.cursor');
             if (cursor) {
                 const interactiveElements = document.querySelectorAll('a, button, .hover\\:-translate-y-2, .hover\\:scale-105, .hover\\:-rotate-3');
+                
+                // Center the cursor element on the pointer
+                gsap.set(cursor, {xPercent: -50, yPercent: -50});
+
                 window.addEventListener('mousemove', e => {
-                    gsap.to(cursor, { duration: 0.2, x: e.clientX, y: e.clientY });
+                    // Instantly move the cursor without a delay
+                    gsap.set(cursor, { x: e.clientX, y: e.clientY });
                 });
                 interactiveElements.forEach(el => {
                     el.addEventListener('mouseenter', () => cursor.classList.add('cursor-grow'));
@@ -566,10 +605,11 @@
             const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
             mobileMenuButton.addEventListener('click', () => {
-                const isExpanded = mobileMenu.classList.toggle('-translate-x-full');
-                mobileMenuButton.innerHTML = isExpanded ? '<i data-lucide="menu"></i>' : '<i data-lucide="x"></i>';
+                mobileMenu.classList.toggle('-translate-x-full');
+                const isHidden = mobileMenu.classList.contains('-translate-x-full');
+                mobileMenuButton.innerHTML = isHidden ? '<i data-lucide="menu"></i>' : '<i data-lucide="x"></i>';
                 lucide.createIcons();
-                document.body.style.overflow = isExpanded ? '' : 'hidden';
+                document.body.style.overflow = isHidden ? '' : 'hidden';
             });
 
             mobileNavLinks.forEach(link => {
@@ -581,13 +621,53 @@
                 });
             });
 
+            // --- Project Filtering ---
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectItems = document.querySelectorAll('.project-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Handle active button styling
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active-filter', 'bg-black', 'text-white');
+                        btn.classList.add('bg-white', 'text-gray-700');
+                    });
+                    button.classList.add('active-filter', 'bg-black', 'text-white');
+                    button.classList.remove('bg-white', 'text-gray-700');
+            
+                    const filter = button.dataset.filter;
+            
+                    projectItems.forEach(item => {
+                        const itemCategories = item.dataset.category;
+                        item.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
+            
+                        if (filter === 'all' || (itemCategories && itemCategories.includes(filter))) {
+                            item.style.display = 'grid';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 10);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.95)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300); // Wait for transition to finish
+                        }
+                    });
+                });
+            });
+
             // --- Smooth Scrolling for all links ---
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                    const targetElement = document.querySelector(this.getAttribute('href'));
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
                 });
             });
 
@@ -598,3 +678,5 @@
 </body>
 
 </html>
+
+

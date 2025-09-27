@@ -7,7 +7,7 @@
     <title>Suraj Kumar</title>
     <meta name="description"
         content="The professional portfolio of Suraj Kumar, a Data Scientist and Machine Learning Engineer specializing in AI, ML, and data visualization.">
-    <link rel="icon" type="image/png" href="profile.png">
+    <link rel="icon" type="image/png" href="./profile/profile.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -98,6 +98,11 @@
             -webkit-backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
+        
+        /* NEW: Class to hide header on scroll down */
+        #header.header-hidden {
+            transform: translateY(-100%);
+        }
 
         /* Subtle background pattern for hero section */
         .hero-pattern {
@@ -111,9 +116,9 @@
         }
 
         /* Style for the active filter button */
-        .filter-btn.active-filter {
+        .filter-btn.active-filter,
+        .blog-filter-btn.active-filter {
             background-color: #111827;
-            /* A darker black */
             color: #ffffff;
         }
     </style>
@@ -139,6 +144,7 @@
                 <a href="#certifications"
                     class="nav-link text-gray-600 hover:text-black transition-colors">Certifications</a>
                 <a href="#projects" class="nav-link text-gray-600 hover:text-black transition-colors">Projects</a>
+                <a href="#blog" class="nav-link text-gray-600 hover:text-black transition-colors">Blog</a>
                 <a href="#skills" class="nav-link text-gray-600 hover:text-black transition-colors">Skills</a>
             </nav>
             <a href="#contact"
@@ -164,6 +170,8 @@
                     class="mobile-nav-link text-2xl text-gray-700 hover:text-black transition-colors">Certifications</a>
                 <a href="#projects"
                     class="mobile-nav-link text-2xl text-gray-700 hover:text-black transition-colors">Projects</a>
+                <a href="#blog"
+                    class="mobile-nav-link text-2xl text-gray-700 hover:text-black transition-colors">Blog</a>
                 <a href="#skills"
                     class="mobile-nav-link text-2xl text-gray-700 hover:text-black transition-colors">Skills</a>
                 <a href="#contact"
@@ -173,17 +181,20 @@
     </header>
 
     <main>
+        <!-- === START: UPDATED HOME SECTION === -->
         <section id="home" class="min-h-screen flex items-center bg-gray-100 hero-pattern">
             <div class="container mx-auto px-6">
-                <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
-                    <div class="md:w-3/5 text-center md:text-left">
-                        <h1 class="gsap-reveal text-5xl md:text-8xl font-extrabold mb-4 text-black leading-tight">Suraj
-                            Kumar</h1>
-                        <p class="gsap-reveal text-2xl md:text-3xl text-gray-600">Data Scientist & Machine Learning
-                            Engineer</p>
+                <!-- MODIFIED: Changed justify-between to justify-center and increased gap for better spacing -->
+                <div class="flex flex-col-reverse md:flex-row items-center justify-center gap-16">
+                    <!-- MODIFIED: Removed fixed width (md:w-3/5) to allow content to size itself -->
+                    <div class="text-center md:text-left">
+                        <!-- MODIFIED: Added a <br> tag for better typography and responsiveness -->
+                        <h1 class="gsap-reveal text-5xl md:text-8xl font-extrabold mb-4 text-black leading-tight">Suraj<br>Kumar</h1>
+                        <p class="gsap-reveal text-2xl md:text-3xl text-gray-600">Data Scientist & Machine Learning Engineer</p>
                     </div>
-                    <div class="md:w-2/5 flex justify-center">
-                        <img src="profile.png"
+                    <!-- MODIFIED: Removed fixed width (md:w-2/5) -->
+                    <div class="flex justify-center">
+                        <img src="./profile/profile.png"
                             onerror="this.onerror=null;this.src='https://placehold.co/400x400/e5e7eb/111827?text=SK';"
                             alt="Suraj Kumar"
                             class="gsap-reveal-img w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-8 border-white shadow-2xl transition-transform duration-300 hover:-rotate-3">
@@ -191,6 +202,8 @@
                 </div>
             </div>
         </section>
+        <!-- === END: UPDATED HOME SECTION === -->
+
 
         <section id="about" class="py-24 bg-white">
             <div class="container mx-auto px-6 max-w-4xl">
@@ -202,6 +215,7 @@
                     reducing errors, and advancing the connections within neural networks. Driven by curiosity and a
                     problem-solving mindset, I aim to push the boundaries of AI, transforming complex data into
                     intelligent solutions that make a real impact.
+                </p>
             </div>
         </section>
 
@@ -217,7 +231,7 @@
                                 </div>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold mb-1 text-gray-900">Elevating Large Language Models’
+                                <h3 class="text-xl font-bold mb-1 text-gray-900">Elevating Large Language Models'
                                     Comprehensibility with SHAP Values</h3>
                                 <p class="text-gray-500 mb-2">Book Chapter in: Revolutionizing Machine Learning with
                                     Large Language Models, 2025</p>
@@ -270,7 +284,6 @@
             <div class="container mx-auto px-6 max-w-4xl">
                 <h2 class="gsap-reveal text-4xl font-bold text-center mb-12 text-black">Certifications & Courses</h2>
                 <div class="space-y-8">
-                    <!-- Certification Item 1 -->
                     <div class="gsap-reveal flex items-start space-x-4">
                         <div>
                             <div class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md">
@@ -280,7 +293,7 @@
                         <div>
                             <h3 class="text-xl font-bold text-gray-900">Data Science Mentorship Program 1.0</h3>
                             <p class="text-gray-500 mb-2">CampusX | Issued Feb 2024</p>
-                            <a href="#" target="_blank" class="font-semibold text-black hover:underline">
+                            <a href="./certificate/DsmpCertificateCampusx.png" target="_blank" class="font-semibold text-black hover:underline">
                                 View Credential <i data-lucide="external-link" class="inline w-4 h-4"></i>
                             </a>
                         </div>
@@ -293,7 +306,6 @@
             <div class="container mx-auto px-6">
                 <h2 class="gsap-reveal text-4xl font-bold text-center mb-12 text-black">Featured Projects</h2>
 
-                <!-- Filter Buttons -->
                 <div id="project-filters" class="gsap-reveal flex flex-wrap justify-center gap-2 md:gap-4 mb-16">
                     <button data-filter="all"
                         class="filter-btn active-filter bg-black text-white font-semibold py-2 px-5 rounded-full transition-colors">All</button>
@@ -314,12 +326,11 @@
                         Visualization</button>
                 </div>
 
-                <div class="space-y-20">
-                    <!-- Project 1 -->
+                <div class="space-y-12">
                     <div class="project-item gsap-reveal grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
                         data-category="ml viz">
                         <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-200">
-                            <img src="cancer.png"
+                            <img src="./projectImage/cancer.png"
                                 onerror="this.onerror=null;this.src='https://placehold.co/1280x720/e5e7eb/111827?text=Project+Screenshot';"
                                 alt="Breast Cancer Prediction System Screenshot" class="rounded-md w-full object-cover">
                         </div>
@@ -358,11 +369,10 @@
                         </div>
                     </div>
 
-                    <!-- Project 2 -->
                     <div class="project-item gsap-reveal grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
                         data-category="ml nlp">
                         <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-200 md:order-2">
-                            <img src="laptop.png"
+                            <img src="./projectImage/laptop.png"
                                 onerror="this.onerror=null;this.src='https://placehold.co/1280x720/e5e7eb/111827?text=Project+Screenshot';"
                                 alt="Laptop Recommendation System Screenshot" class="rounded-md w-full object-cover">
                         </div>
@@ -410,107 +420,211 @@
             </div>
         </section>
 
-        <section id="skills" class="py-24 bg-white">
+        <section id="blog" class="py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <h2 class="gsap-reveal text-4xl font-bold text-center mb-12 text-black">Recent Writings</h2>
+
+                 <div id="blog-filters" class="gsap-reveal flex flex-wrap justify-center gap-2 md:gap-4 mb-16">
+                    <button data-filter="all" class="blog-filter-btn active-filter bg-black text-white font-semibold py-2 px-5 rounded-full transition-colors">All</button>
+                    <button data-filter="xai" class="blog-filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">Explainable AI</button>
+                    <button data-filter="genai" class="blog-filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">Generative AI</button>
+                    <button data-filter="viz" class="blog-filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">Data Visualization</button>
+                </div>
+    
+                <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+    
+                    <div class="blog-item gsap-reveal bg-white p-4 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 border border-gray-200" data-category="xai ml">
+                        <img src="./blog/blog1.webp" alt="Blog post on Explainable AI" class="w-full h-48 object-cover rounded-md mb-4">
+                        <div class="px-2 pb-2">
+                            <span class="bg-gray-200 text-gray-800 text-xs font-semibold mb-2 px-2.5 py-0.5 rounded-full">Machine Learning</span>
+                            <h3 class="text-xl font-bold mt-2 mb-2 text-gray-900">Machine Learning vs. Deep Learning: What’s the Difference?</h3>
+                            <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                                Artificial Intelligence (AI) has been evolving rapidly, transforming industries and reshaping the way we interact with technology. Two of the most commonly 
+                            <a href="https://medium.com/@surajksharma2304" target="_blank" rel="noopener noreferrer" class="font-semibold text-black hover:underline inline-flex items-center">
+                                Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="blog-item gsap-reveal bg-white p-4 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 border border-gray-200" data-category="genai">
+                        <img src="https://placehold.co/600x400/e5e7eb/111827?text=Blog+Image" alt="Blog post on Generative AI" class="w-full h-48 object-cover rounded-md mb-4">
+                        <div class="px-2 pb-2">
+                            <span class="bg-gray-200 text-gray-800 text-xs font-semibold mb-2 px-2.5 py-0.5 rounded-full">Generative AI</span>
+                            <h3 class="text-xl font-bold mt-2 mb-2 text-gray-900">Fine-Tuning LLMs for Custom Tasks: A Practical Guide</h3>
+                            <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                                 A step-by-step tutorial on adapting pre-trained large language models to solve specific problems for your own projects...
+                            </p>
+                             <a href="https://medium.com/@surajksharma2304" target="_blank" rel="noopener noreferrer" class="font-semibold text-black hover:underline inline-flex items-center">
+                                Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                       <div class="blog-item gsap-reveal bg-white p-4 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 border border-gray-200" data-category="viz">
+                        <img src="https://placehold.co/600x400/e5e7eb/111827?text=Blog+Image" alt="Blog post on Data Visualization" class="w-full h-48 object-cover rounded-md mb-4">
+                        <div class="px-2 pb-2">
+                            <span class="bg-gray-200 text-gray-800 text-xs font-semibold mb-2 px-2.5 py-0.5 rounded-full">Data Visualization</span>
+                            <h3 class="text-xl font-bold mt-2 mb-2 text-gray-900">Storytelling with Data: Beyond Basic Bar Charts</h3>
+                            <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                                Learn how to craft compelling narratives with your data using advanced visualization techniques in Plotly and Tableau...
+                            </p>
+                             <a href="https://medium.com/@surajksharma2304" target="_blank" rel="noopener noreferrer" class="font-semibold text-black hover:underline inline-flex items-center">
+                                Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                       <div class="blog-item gsap-reveal bg-white p-4 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 border border-gray-200" data-category="genai">
+                        <img src="https://placehold.co/600x400/e5e7eb/111827?text=Blog+Image" alt="Blog post on LangChain" class="w-full h-48 object-cover rounded-md mb-4">
+                        <div class="px-2 pb-2">
+                            <span class="bg-gray-200 text-gray-800 text-xs font-semibold mb-2 px-2.5 py-0.5 rounded-full">Generative AI</span>
+                            <h3 class="text-xl font-bold mt-2 mb-2 text-gray-900">Getting Started with LangChain for LLM Applications</h3>
+                            <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                                A beginner's guide to building powerful applications on top of Large Language Models using the LangChain library...
+                            </p>
+                             <a href="https://medium.com/@surajksharma2304" target="_blank" rel="noopener noreferrer" class="font-semibold text-black hover:underline inline-flex items-center">
+                                Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                       <div class="blog-item gsap-reveal bg-white p-4 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 border border-gray-200" data-category="xai ml">
+                        <img src="https://placehold.co/600x400/e5e7eb/111827?text=Blog+Image" alt="Blog post on AI Fairness" class="w-full h-48 object-cover rounded-md mb-4">
+                        <div class="px-2 pb-2">
+                            <span class="bg-gray-200 text-gray-800 text-xs font-semibold mb-2 px-2.5 py-0.5 rounded-full">Explainable AI</span>
+                            <h3 class="text-xl font-bold mt-2 mb-2 text-gray-900">Is My Model Biased? A Guide to Fairness in AI</h3>
+                            <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                                Explore common types of bias in machine learning models and learn techniques to identify and mitigate them for fairer outcomes...
+                            </p>
+                             <a href="https://medium.com/@surajksharma2304" target="_blank" rel="noopener noreferrer" class="font-semibold text-black hover:underline inline-flex items-center">
+                                Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                       <div class="blog-item gsap-reveal bg-white p-4 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 border border-gray-200" data-category="viz">
+                        <img src="https://placehold.co/600x400/e5e7eb/111827?text=Blog+Image" alt="Blog post on Power BI" class="w-full h-48 object-cover rounded-md mb-4">
+                        <div class="px-2 pb-2">
+                            <span class="bg-gray-200 text-gray-800 text-xs font-semibold mb-2 px-2.5 py-0.5 rounded-full">Data Visualization</span>
+                            <h3 class="text-xl font-bold mt-2 mb-2 text-gray-900">Creating Interactive Dashboards with Power BI</h3>
+                            <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                                From connecting data sources to publishing your report, this guide covers the essentials of building dynamic dashboards...
+                            </p>
+                             <a href="https://medium.com/@surajksharma2304" target="_blank" rel="noopener noreferrer" class="font-semibold text-black hover:underline inline-flex items-center">
+                                Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                 <div class="text-center mt-16">
+                    <a href="https://medium.com/@surajksharma2304" target="_blank" rel="noopener noreferrer"
+                        class="gsap-reveal bg-black hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-full text-lg inline-flex items-center transition-colors">
+                        View All Posts on Medium
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-24 bg-gray-100">
             <div class="container mx-auto px-6 text-center max-w-4xl">
                 <h2 class="gsap-reveal text-4xl font-bold mb-12 text-black">Skills & Resume</h2>
                 <div class="gsap-reveal grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 text-sm">
 
                     <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        class="flex items-center justify-center text-center bg-gray-50 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full border">
                         <i data-lucide="python" class="w-6 h-6 mr-2"></i>Python
                     </div>
                     <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        class="flex items-center justify-center text-center bg-gray-50 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full border">
                         C++
                     </div>
                     <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        class="flex items-center justify-center text-center bg-gray-50 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full border">
                         <i data-lucide="database" class="w-6 h-6 mr-2"></i>SQL
                     </div>
                     <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        class="flex items-center justify-center text-center bg-gray-50 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full border">
                         <i data-lucide="brain-circuit" class="w-6 h-6 mr-2"></i>Machine Learning
                     </div>
                     <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        class="flex items-center justify-center text-center bg-gray-50 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full border">
                         <i data-lucide="layers" class="w-6 h-6 mr-2"></i>Deep Learning
                     </div>
                     <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        class="flex items-center justify-center text-center bg-gray-50 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full border">
                         <i data-lucide="sparkles" class="w-6 h-6 mr-2"></i>Generative AI
                     </div>
                     <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        class="flex items-center justify-center text-center bg-gray-50 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full border">
                         <i data-lucide="table" class="w-6 h-6 mr-2"></i>Pandas
                     </div>
                     <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        class="flex items-center justify-center text-center bg-gray-50 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full border">
                         NumPy
                     </div>
                     <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        class="flex items-center justify-center text-center bg-gray-50 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full border">
                         Scikit-learn
                     </div>
                     <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        class="flex items-center justify-center text-center bg-gray-50 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full border">
                         PyTorch
                     </div>
                     <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        class="flex items-center justify-center text-center bg-gray-50 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full border">
                         Langchain
                     </div>
                     <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        class="flex items-center justify-center text-center bg-gray-50 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full border">
                         <i data-lucide="bar-chart-3" class="w-6 h-6 mr-2"></i>Data Viz
                     </div>
                     <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        class="flex items-center justify-center text-center bg-gray-50 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full border">
                         Feature Engineering
                     </div>
                     <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        class="flex items-center justify-center text-center bg-gray-50 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full border">
                         Web Scraping
                     </div>
                     <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        class="flex items-center justify-center text-center bg-gray-50 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full border">
                         XGBoost
                     </div>
                     <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        class="flex items-center justify-center text-center bg-gray-50 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full border">
                         NLTK
                     </div>
                     <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        class="flex items-center justify-center text-center bg-gray-50 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full border">
                         MLOps
                     </div>
                     <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        class="flex items-center justify-center text-center bg-gray-50 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full border">
                         Data Cleaning
                     </div>
                     <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        class="flex items-center justify-center text-center bg-gray-50 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full border">
                         Feature Selection
                     </div>
                     <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        class="flex items-center justify-center text-center bg-gray-50 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full border">
                         <i data-lucide="terminal" class="w-6 h-6 mr-2"></i>Linux
                     </div>
-
-                    <!-- Newly Added Skills -->
                     <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        class="flex items-center justify-center text-center bg-gray-50 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full border">
                         <i data-lucide="github" class="w-6 h-6 mr-2"></i>GitHub
                     </div>
                     <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        class="flex items-center justify-center text-center bg-gray-50 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full border">
                         <i data-lucide="bar-chart-2" class="w-6 h-6 mr-2"></i>Power BI
                     </div>
                     <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        class="flex items-center justify-center text-center bg-gray-50 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full border">
                         <i data-lucide="grid" class="w-6 h-6 mr-2"></i>Tableau
                     </div>
                     <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
+                        class="flex items-center justify-center text-center bg-gray-50 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full border">
                         <i data-lucide="layers" class="w-6 h-6 mr-2"></i>Data Structures
                     </div>
 
@@ -523,9 +637,7 @@
             </div>
         </section>
 
-
-
-        <section id="contact" class="py-24 bg-gray-100">
+        <section id="contact" class="py-24 bg-gray-50">
             <div class="container mx-auto px-6 text-center max-w-2xl">
                 <h2 class="gsap-reveal text-4xl font-bold mb-4 text-black">Get In Touch</h2>
                 <p class="gsap-reveal text-lg text-gray-600 mb-8">
@@ -542,6 +654,15 @@
                     <a href="#" target="_blank" aria-label="LinkedIn Profile"
                         class="text-gray-500 hover:text-black transition-transform transform hover:scale-110"><i
                             data-lucide="linkedin" class="w-8 h-8"></i></a>
+                       <a href="https://x.com/surajksharma23" target="_blank" aria-label="X Profile"
+                        class="text-gray-500 hover:text-black transition-transform transform hover:scale-110">
+                        <svg class="w-8 h-8" role="img" viewBox="0 0 24 24" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>X</title>
+                            <path
+                                d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                        </svg>
+                    </a>
                     <a href="https://leetcode.com/surajksharma7" target="_blank" aria-label="LeetCode Profile"
                         class="text-gray-500 hover:text-black transition-transform transform hover:scale-110">
                         <svg class="w-8 h-8" role="img" viewBox="0 0 24 24" fill="currentColor"
@@ -586,6 +707,8 @@
         document.addEventListener('DOMContentLoaded', () => {
             lucide.createIcons();
 
+            const header = document.getElementById('header');
+
             // --- Preloader ---
             const preloader = document.getElementById('preloader');
             window.addEventListener('load', () => {
@@ -599,12 +722,8 @@
             const cursor = document.querySelector('.cursor');
             if (cursor) {
                 const interactiveElements = document.querySelectorAll('a, button, .hover\\:-translate-y-2, .hover\\:scale-105, .hover\\:-rotate-3');
-
-                // Center the cursor element on the pointer
                 gsap.set(cursor, { xPercent: -50, yPercent: -50 });
-
                 window.addEventListener('mousemove', e => {
-                    // Instantly move the cursor without a delay
                     gsap.set(cursor, { x: e.clientX, y: e.clientY });
                 });
                 interactiveElements.forEach(el => {
@@ -615,52 +734,51 @@
 
             // --- GSAP Animations ---
             gsap.registerPlugin(ScrollTrigger);
-
             document.querySelectorAll('section').forEach(section => {
                 const revealElements = section.querySelectorAll('.gsap-reveal');
                 const revealImages = section.querySelectorAll('.gsap-reveal-img');
-
-                gsap.fromTo(revealElements,
-                    { opacity: 0, y: 50 },
-                    {
-                        scrollTrigger: {
-                            trigger: section,
-                            start: "top 80%",
-                            end: "bottom 20%",
-                            toggleActions: "play none none reverse"
-                        },
-                        opacity: 1,
-                        y: 0,
-                        stagger: 0.15,
-                        duration: 0.8,
-                        ease: 'power3.out'
-                    }
-                );
-
-                gsap.fromTo(revealImages,
-                    { opacity: 0, scale: 0.9 },
-                    {
-                        scrollTrigger: {
-                            trigger: section,
-                            start: "top 80%",
-                            end: "bottom 20%",
-                            toggleActions: "play none none reverse"
-                        },
-                        opacity: 1,
-                        scale: 1,
-                        duration: 1,
-                        ease: 'power3.out'
-                    }
-                );
+                gsap.fromTo(revealElements, { opacity: 0, y: 50 }, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play none none reverse"
+                    },
+                    opacity: 1, y: 0, stagger: 0.15, duration: 0.8, ease: 'power3.out'
+                });
+                gsap.fromTo(revealImages, { opacity: 0, scale: 0.9 }, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play none none reverse"
+                    },
+                    opacity: 1, scale: 1, duration: 1, ease: 'power3.out'
+                });
             });
 
-            // Header animation
-            const header = document.getElementById('header');
+            // --- Header Scroll Effects ---
+            // Effect 1: Glassmorphism background on scroll
             ScrollTrigger.create({
                 start: 'top -80',
                 end: 99999,
                 toggleClass: { className: 'glass-header', targets: header }
             });
+
+            // NEW Effect 2: Hide header on scroll down, show on scroll up
+            let lastScrollTop = 0;
+            window.addEventListener("scroll", function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop && scrollTop > header.offsetHeight) {
+                    // Scroll Down
+                    header.classList.add('header-hidden');
+                } else {
+                    // Scroll Up
+                    header.classList.remove('header-hidden');
+                }
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+            }, false);
+
 
             // --- Mobile Navigation ---
             const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -684,48 +802,52 @@
                 });
             });
 
-            // --- Project Filtering ---
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const projectItems = document.querySelectorAll('#projects .project-item');
+            // --- Filtering Logic (Projects & Blog) ---
+            function setupFilter(filterButtonsClass, itemsClass) {
+                const filterButtons = document.querySelectorAll(filterButtonsClass);
+                const items = document.querySelectorAll(itemsClass);
 
-            filterButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    // Handle active button styling
-                    filterButtons.forEach(btn => {
-                        btn.classList.remove('active-filter', 'bg-black', 'text-white');
-                        btn.classList.add('bg-white', 'text-gray-700');
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        filterButtons.forEach(btn => {
+                            btn.classList.remove('active-filter', 'bg-black', 'text-white');
+                            btn.classList.add('bg-white', 'text-gray-700');
+                        });
+                        button.classList.add('active-filter', 'bg-black', 'text-white');
+                        button.classList.remove('bg-white', 'text-gray-700');
+
+                        const filter = button.dataset.filter;
+
+                        items.forEach(item => {
+                            const itemCategories = item.dataset.category;
+                            const displayStyle = itemsClass.includes('project-item') ? 'grid' : 'block';
+                            
+                            item.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
+
+                            if (filter === 'all' || (itemCategories && itemCategories.includes(filter))) {
+                                item.style.display = displayStyle;
+                                setTimeout(() => {
+                                    item.style.opacity = '1';
+                                    item.style.transform = 'scale(1)';
+                                }, 10);
+                            } else {
+                                item.style.opacity = '0';
+                                item.style.transform = 'scale(0.95)';
+                                setTimeout(() => {
+                                    item.style.display = 'none';
+                                }, 300);
+                            }
+                        });
+
+                        setTimeout(() => {
+                            ScrollTrigger.refresh();
+                        }, 310);
                     });
-                    button.classList.add('active-filter', 'bg-black', 'text-white');
-                    button.classList.remove('bg-white', 'text-gray-700');
-
-                    const filter = button.dataset.filter;
-
-                    projectItems.forEach(item => {
-                        const itemCategories = item.dataset.category;
-                        item.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
-
-                        if (filter === 'all' || (itemCategories && itemCategories.includes(filter))) {
-                            item.style.display = 'grid';
-                            setTimeout(() => {
-                                item.style.opacity = '1';
-                                item.style.transform = 'scale(1)';
-                            }, 10);
-                        } else {
-                            item.style.opacity = '0';
-                            item.style.transform = 'scale(0.95)';
-                            setTimeout(() => {
-                                item.style.display = 'none';
-                            }, 300); // Wait for transition to finish
-                        }
-                    });
-
-                    // THIS IS THE FIX: Refresh ScrollTrigger after the filtering animations have had time to complete.
-                    // This prevents the scroll-based animations on lower sections from getting confused by the change in page height.
-                    setTimeout(() => {
-                        ScrollTrigger.refresh();
-                    }, 310);
                 });
-            });
+            }
+
+            setupFilter('.filter-btn', '#projects .project-item');
+            setupFilter('.blog-filter-btn', '#blog .blog-item');
 
             // --- Smooth Scrolling for all links ---
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -747,5 +869,3 @@
 </body>
 
 </html>
-
-

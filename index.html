@@ -98,7 +98,7 @@
             -webkit-backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
-        
+
         /* NEW: Class to hide header on scroll down */
         #header.header-hidden {
             transform: translateY(-100%);
@@ -189,8 +189,10 @@
                     <!-- MODIFIED: Removed fixed width (md:w-3/5) to allow content to size itself -->
                     <div class="text-center md:text-left">
                         <!-- MODIFIED: Added a <br> tag for better typography and responsiveness -->
-                        <h1 class="gsap-reveal text-5xl md:text-8xl font-extrabold mb-4 text-black leading-tight">Suraj<br>Kumar</h1>
-                        <p class="gsap-reveal text-2xl md:text-3xl text-gray-600">Data Scientist & Machine Learning Engineer</p>
+                        <h1 class="gsap-reveal text-5xl md:text-8xl font-extrabold mb-4 text-black leading-tight">
+                            Suraj<br>Kumar</h1>
+                        <p class="gsap-reveal text-2xl md:text-3xl text-gray-600">Data Scientist & Machine Learning
+                            Engineer</p>
                     </div>
                     <!-- MODIFIED: Removed fixed width (md:w-2/5) -->
                     <div class="flex justify-center">
@@ -293,7 +295,8 @@
                         <div>
                             <h3 class="text-xl font-bold text-gray-900">Data Science Mentorship Program 1.0</h3>
                             <p class="text-gray-500 mb-2">CampusX | Issued Feb 2024</p>
-                            <a href="./certificate/DsmpCertificateCampusx.png" target="_blank" class="font-semibold text-black hover:underline">
+                            <a href="./certificate/DsmpCertificateCampusx.png" target="_blank"
+                                class="font-semibold text-black hover:underline">
                                 View Credential <i data-lucide="external-link" class="inline w-4 h-4"></i>
                             </a>
                         </div>
@@ -411,8 +414,9 @@
                         </div>
                     </div>
                 </div>
-                 <div class="text-center mt-20">
-                    <a href="https://github.com/surajksharma7?tab=repositories" target="_blank" rel="noopener noreferrer"
+                <div class="text-center mt-20">
+                    <a href="https://github.com/surajksharma7?tab=repositories" target="_blank"
+                        rel="noopener noreferrer"
                         class="gsap-reveal bg-white hover:bg-gray-200 text-black font-bold py-3 px-8 rounded-full text-lg btn inline-flex items-center transition-colors border-2 border-gray-300">
                         View All Projects on GitHub <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
                     </a>
@@ -424,38 +428,74 @@
             <div class="container mx-auto px-6 max-w-7xl">
                 <h2 class="gsap-reveal text-4xl font-bold text-center mb-12 text-black">Recent Writings</h2>
 
-                 <div id="blog-filters" class="gsap-reveal flex flex-wrap justify-center gap-2 md:gap-4 mb-16">
-                    <button data-filter="all" class="blog-filter-btn active-filter bg-black text-white font-semibold py-2 px-5 rounded-full transition-colors">All</button>
-                    <button data-filter="xai" class="blog-filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">Explainable AI</button>
-                    <button data-filter="genai" class="blog-filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">Generative AI</button>
-                    <button data-filter="viz" class="blog-filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">Data Visualization</button>
+                <div id="blog-filters" class="gsap-reveal flex flex-wrap justify-center gap-2 md:gap-4 mb-16">
+                    <button data-filter="all"
+                        class="blog-filter-btn active-filter bg-black text-white font-semibold py-2 px-5 rounded-full transition-colors">All</button>
+                    <button data-filter="xai"
+                        class="blog-filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">Explainable
+                        AI</button>
+                    <button data-filter="genai"
+                        class="blog-filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">Generative
+                        AI</button>
+                    <button data-filter="viz"
+                        class="blog-filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">Data
+                        Visualization</button>
                 </div>
-    
+
                 <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    
-    
-                    <div class="blog-item gsap-reveal bg-white p-4 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 border border-gray-200" data-category="xai ml">
-                        <img src="./blog/blog1.webp" alt="Blog post on Explainable AI" class="w-full h-48 object-cover rounded-md mb-4">
+
+                    <!-- blog 1  -->
+                    <div class="blog-item gsap-reveal bg-white p-4 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 border border-gray-200"
+                        data-category="xai ml">
+                        <img src="./blog/blog1.webp" alt="Blog post on Explainable AI"
+                            class="w-full h-48 object-cover rounded-md mb-4">
                         <div class="px-2 pb-2">
-                            <span class="bg-gray-200 text-gray-800 text-xs font-semibold mb-2 px-2.5 py-0.5 rounded-full">Machine Learning</span>
-                            <h3 class="text-xl font-bold mt-2 mb-2 text-gray-900">Machine Learning vs. Deep Learning: What’s the Difference?</h3>
+                            <span
+                                class="bg-gray-200 text-gray-800 text-xs font-semibold mb-2 px-2.5 py-0.5 rounded-full">Machine
+                                Learning</span>
+                            <h3 class="text-xl font-bold mt-2 mb-2 text-gray-900">Machine Learning vs. Deep Learning:
+                                What’s the Difference?</h3>
                             <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-                                Artificial Intelligence (AI) has been evolving rapidly, transforming industries and reshaping the way we interact with technology. Two of the most commonly 
-                            <a href="https://surajksharma2304.medium.com/machine-learning-vs-deep-learning-whats-the-difference-b4e85922be6b" target="_blank" rel="noopener noreferrer" class="font-semibold text-black hover:underline inline-flex items-center">
-                                Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
-                            </a>
+                                Artificial Intelligence (AI) has been evolving rapidly, transforming industries and
+                                reshaping the way we interact with technology. Two of the most commonly
+                                <a href="https://surajksharma2304.medium.com/machine-learning-vs-deep-learning-whats-the-difference-b4e85922be6b"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="font-semibold text-black hover:underline inline-flex items-center">
+                                    Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                                </a>
                         </div>
                     </div>
-    
 
+                    <!-- this is blog 2  -->
 
-                 <div class="text-center mt-16">
-                    <a href="https://medium.com/@surajksharma2304" target="_blank" rel="noopener noreferrer"
-                        class="gsap-reveal bg-black hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-full text-lg inline-flex items-center transition-colors">
-                        View All Posts on Medium
-                    </a>
+                    <div class="blog-item gsap-reveal bg-white p-4 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 border border-gray-200"
+                        data-category="xai ml">
+                        <img src="./blog/blog2.webp" alt="Blog post on Explainable AI"
+                            class="w-full h-48 object-cover rounded-md mb-4">
+                        <div class="px-2 pb-2">
+                            <span
+                                class="bg-gray-200 text-gray-800 text-xs font-semibold mb-2 px-2.5 py-0.5 rounded-full">Machine
+                                Learning</span>
+                            <h3 class="text-xl font-bold mt-2 mb-2 text-gray-900">Taming the Wild Model: An Introduction
+                                to Ridge Regression</h3>
+                            <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                                Have you ever trained a machine learning model that performed spectacularly on your
+                                training data
+                                <a href="https://surajksharma2304.medium.com/taming-the-wild-model-an-introduction-to-ridge-regression-34ceaa39800c"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="font-semibold text-black hover:underline inline-flex items-center">
+                                    Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                                </a>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-16">
+                        <a href="https://medium.com/@surajksharma2304" target="_blank" rel="noopener noreferrer"
+                            class="gsap-reveal bg-black hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-full text-lg inline-flex items-center transition-colors">
+                            View All Posts on Medium
+                        </a>
+                    </div>
                 </div>
-            </div>
         </section>
 
         <section id="skills" class="py-24 bg-gray-100">
@@ -586,7 +626,7 @@
                     <a href="#" target="_blank" aria-label="LinkedIn Profile"
                         class="text-gray-500 hover:text-black transition-transform transform hover:scale-110"><i
                             data-lucide="linkedin" class="w-8 h-8"></i></a>
-                       <a href="https://x.com/surajksharma23" target="_blank" aria-label="X Profile"
+                    <a href="https://x.com/surajksharma23" target="_blank" aria-label="X Profile"
                         class="text-gray-500 hover:text-black transition-transform transform hover:scale-110">
                         <svg class="w-8 h-8" role="img" viewBox="0 0 24 24" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
@@ -699,7 +739,7 @@
 
             // NEW Effect 2: Hide header on scroll down, show on scroll up
             let lastScrollTop = 0;
-            window.addEventListener("scroll", function() {
+            window.addEventListener("scroll", function () {
                 let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                 if (scrollTop > lastScrollTop && scrollTop > header.offsetHeight) {
                     // Scroll Down
@@ -753,7 +793,7 @@
                         items.forEach(item => {
                             const itemCategories = item.dataset.category;
                             const displayStyle = itemsClass.includes('project-item') ? 'grid' : 'block';
-                            
+
                             item.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
 
                             if (filter === 'all' || (itemCategories && itemCategories.includes(filter))) {

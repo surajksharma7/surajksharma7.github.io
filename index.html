@@ -15,6 +15,8 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <!-- MathJax for LaTeX Support -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -115,6 +117,41 @@
             background-color: #111827; /* A darker black */
             color: #ffffff;
         }
+
+        /* Blog Modal Styles */
+        #blog-modal-content {
+            line-height: 1.8;
+            color: #374151;
+        }
+        #blog-modal-content h2, #blog-modal-content h3 {
+            font-weight: 800;
+            line-height: 1.2;
+            color: #111827;
+        }
+        #blog-modal-content h2 {
+            font-size: 2.25rem;
+            margin-bottom: 0.5rem;
+        }
+         #blog-modal-content h3 {
+            font-size: 1.75rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        #blog-modal-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+        }
+        #blog-modal-content code {
+            background-color: #e5e7eb;
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.25rem;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+        #close-blog-modal {
+            font-size: 2.5rem;
+            line-height: 1;
+        }
     </style>
 </head>
 
@@ -137,6 +174,7 @@
                 <a href="#education" class="nav-link text-gray-600 hover:text-black transition-colors">Education</a>
                 <a href="#certifications" class="nav-link text-gray-600 hover:text-black transition-colors">Certifications</a>
                 <a href="#projects" class="nav-link text-gray-600 hover:text-black transition-colors">Projects</a>
+                <a href="#blog" class="nav-link text-gray-600 hover:text-black transition-colors">Blog</a>
                 <a href="#skills" class="nav-link text-gray-600 hover:text-black transition-colors">Skills</a>
                 <a href="#contact" class="nav-link text-gray-600 hover:text-black transition-colors">Contact</a>
             </nav>
@@ -163,6 +201,8 @@
                     class="mobile-nav-link text-2xl text-gray-700 hover:text-black transition-colors">Certifications</a>
                 <a href="#projects"
                     class="mobile-nav-link text-2xl text-gray-700 hover:text-black transition-colors">Projects</a>
+                <a href="#blog"
+                    class="mobile-nav-link text-2xl text-gray-700 hover:text-black transition-colors">Blog</a>
                 <a href="#skills"
                     class="mobile-nav-link text-2xl text-gray-700 hover:text-black transition-colors">Skills</a>
                 <a href="#contact"
@@ -172,6 +212,7 @@
     </header>
 
     <main>
+        <!-- Home Section -->
         <section id="home" class="min-h-screen flex items-center bg-gray-100 hero-pattern">
             <div class="container mx-auto px-6">
                 <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
@@ -191,6 +232,7 @@
             </div>
         </section>
 
+        <!-- About Section -->
         <section id="about" class="py-24 bg-white">
             <div class="container mx-auto px-6 max-w-4xl">
                 <h2 class="gsap-reveal text-4xl font-bold text-center mb-12 text-black">About Me</h2>
@@ -204,6 +246,7 @@
             </div>
         </section>
 
+        <!-- Research Section -->
         <section id="research" class="py-24 bg-gray-100">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="gsap-reveal text-4xl font-bold mb-16 text-black">Publications & Research</h2>
@@ -235,6 +278,7 @@
             </div>
         </section>
 
+        <!-- Education Section -->
         <section id="education" class="py-24 bg-white">
             <div class="container mx-auto px-6 max-w-4xl">
                 <div class="gsap-reveal">
@@ -265,11 +309,11 @@
             </div>
         </section>
 
+        <!-- Certifications Section -->
         <section id="certifications" class="py-24 bg-gray-50">
             <div class="container mx-auto px-6 max-w-4xl">
                 <h2 class="gsap-reveal text-4xl font-bold text-center mb-12 text-black">Certifications & Courses</h2>
                 <div class="space-y-8">
-                    <!-- Certification Item 1 -->
                     <div class="gsap-reveal flex items-start space-x-4">
                         <div>
                             <div class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md">
@@ -287,7 +331,8 @@
                 </div>
             </div>
         </section>
-
+        
+        <!-- Projects Section -->
         <section id="projects" class="py-24 bg-gray-100">
             <div class="container mx-auto px-6">
                 <h2 class="gsap-reveal text-4xl font-bold text-center mb-12 text-black">Featured Projects</h2>
@@ -315,22 +360,9 @@
                             <p class="text-gray-700 mb-4 leading-relaxed">
                                 Developed a machine learning-powered web application to aid in the early detection of
                                 breast cancer. The system uses a classification model trained on tumor characteristics
-                                to predict whether a growth is benign or malignant. I built an intuitive user interface
-                                with Streamlit, enabling users to input medical measurements and receive instant,
-                                interpretable results, demonstrating a practical application of data science in
-                                healthcare.
+                                to predict whether a growth is benign or malignant.
                             </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Streamlit</span>
-                                <span class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Scikit-learn</span>
-                                <span class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Pandas</span>
-                                <span class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Plotly</span>
-                            </div>
                             <div class="flex items-center space-x-4">
-                                <a href="https://github.com/surajksharma7/breast-cancer-prediction-system"
-                                    target="_blank" class="font-semibold text-black hover:underline inline-flex items-center">
-                                    Live Demo <i data-lucide="external-link" class="ml-1 w-4 h-4"></i>
-                                </a>
                                 <a href="https://github.com/surajksharma7/breast-cancer-prediction-system"
                                     target="_blank" class="font-semibold text-black hover:underline inline-flex items-center">
                                     Source Code <i data-lucide="github" class="ml-1 w-4 h-4"></i>
@@ -349,25 +381,9 @@
                         <div class="text-left md:order-1">
                             <h3 class="text-3xl font-bold mb-3 text-black">Laptop Recommendation System</h3>
                             <p class="text-gray-700 mb-4 leading-relaxed">
-                                The Laptop Recommendation System is a smart, data-driven web application that helps
-                                users find laptops tailored to their needs. By analyzing technical specifications like
-                                processor, RAM, storage, and GPU, the system converts each laptop into a numerical
-                                vector and calculates similarity scores to provide accurate recommendations. Built with
-                                Python and Streamlit, it offers an interactive, user-friendly interface for exploring
-                                and selecting the best laptops quickly and efficiently.
+                                A data-driven web application that helps users find laptops tailored to their needs by analyzing technical specifications and calculating similarity scores to provide accurate recommendations.
                             </p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Python</span>
-                                <span class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Streamlit</span>
-                                <span class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Data Analysis</span>
-                                <span class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Data
-                                    Modeling</span>
-                            </div>
                             <div class="flex items-center space-x-4">
-                                <a href="https://github.com/surajksharma7/Laptop-Recommendation" target="_blank"
-                                    class="font-semibold text-black hover:underline inline-flex items-center">
-                                    Live Demo <i data-lucide="external-link" class="ml-1 w-4 h-4"></i>
-                                </a>
                                 <a href="https://github.com/surajksharma7/Laptop-Recommendation" target="_blank"
                                     class="font-semibold text-black hover:underline inline-flex items-center">
                                     Source Code <i data-lucide="github" class="ml-1 w-4 h-4"></i>
@@ -379,80 +395,50 @@
             </div>
         </section>
 
-        <section id="skills" class="py-24 bg-white">
+        <!-- Blog Section -->
+        <section id="blog" class="py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="gsap-reveal text-4xl font-bold text-center mb-16 text-black">My Blog</h2>
+                <div id="blog-posts" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Blog Post Card 1 -->
+                    <div class="gsap-reveal bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <p class="text-sm text-gray-500 mb-2">September 26, 2025</p>
+                        <h3 class="text-2xl font-bold mb-3 text-black">Understanding SHAP Values</h3>
+                        <p class="text-gray-700 mb-4 flex-grow">A deep dive into how SHAP values can help us understand complex models. We'll explore the math behind it, including the famous Shapley value formula: $\phi_i(v)$</p>
+                        <button class="read-more-btn font-semibold text-black hover:underline self-start" data-post="post1">
+                            Read More <i data-lucide="arrow-right" class="inline w-4 h-4"></i>
+                        </button>
+                    </div>
+                    <!-- Add more blog cards here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-24 bg-gray-100">
             <div class="container mx-auto px-6 text-center max-w-4xl">
                 <h2 class="gsap-reveal text-4xl font-bold mb-12 text-black">Skills & Resume</h2>
                 <div class="gsap-reveal grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 text-sm">
-
-                    <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
-                        <i data-lucide="python" class="w-6 h-6 mr-2"></i>Python
-                    </div>
-                    <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
-                        C++</div>
-                    <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
-                        <i data-lucide="database" class="w-6 h-6 mr-2"></i>SQL
-                    </div>
-                    <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
-                        <i data-lucide="brain-circuit" class="w-6 h-6 mr-2"></i>Machine Learning
-                    </div>
-                    <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
-                        <i data-lucide="layers" class="w-6 h-6 mr-2"></i>Deep Learning
-                    </div>
-                    <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
-                        <i data-lucide="sparkles" class="w-6 h-6 mr-2"></i>Generative AI
-                    </div>
-                    <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
-                        <i data-lucide="table" class="w-6 h-6 mr-2"></i>Pandas
-                    </div>
-                    <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
-                        NumPy</div>
-                    <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
-                        Scikit-learn</div>
-                    <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
-                        PyTorch</div>
-                    <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
-                        Langchain</div>
-                    <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
-                        <i data-lucide="bar-chart-3" class="w-6 h-6 mr-2"></i>Data Viz
-                    </div>
-                    <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
-                        Feature Engineering</div>
-                    <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
-                        Web Scraping</div>
-                    <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
-                        XGBoost</div>
-                    <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
-                        NLTK</div>
-                    <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
-                        MLOps</div>
-                    <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
-                        Data Cleaning</div>
-                    <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
-                        Feature Selection</div>
-                    <div
-                        class="flex items-center justify-center text-center bg-gray-100 p-4 rounded-lg transition-transform duration-300 hover:scale-105 w-full h-full">
-                        <i data-lucide="terminal" class="w-6 h-6 mr-2"></i>Linux
-                    </div>
-
+                    <div class="flex items-center justify-center text-center bg-white p-4 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105 w-full h-full"><i data-lucide="python" class="w-6 h-6 mr-2"></i>Python</div>
+                    <div class="flex items-center justify-center text-center bg-white p-4 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105 w-full h-full">C++</div>
+                    <div class="flex items-center justify-center text-center bg-white p-4 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105 w-full h-full"><i data-lucide="database" class="w-6 h-6 mr-2"></i>SQL</div>
+                    <div class="flex items-center justify-center text-center bg-white p-4 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105 w-full h-full"><i data-lucide="brain-circuit" class="w-6 h-6 mr-2"></i>Machine Learning</div>
+                    <div class="flex items-center justify-center text-center bg-white p-4 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105 w-full h-full"><i data-lucide="layers" class="w-6 h-6 mr-2"></i>Deep Learning</div>
+                    <div class="flex items-center justify-center text-center bg-white p-4 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105 w-full h-full"><i data-lucide="sparkles" class="w-6 h-6 mr-2"></i>Generative AI</div>
+                    <div class="flex items-center justify-center text-center bg-white p-4 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105 w-full h-full"><i data-lucide="table" class="w-6 h-6 mr-2"></i>Pandas</div>
+                    <div class="flex items-center justify-center text-center bg-white p-4 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105 w-full h-full">NumPy</div>
+                    <div class="flex items-center justify-center text-center bg-white p-4 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105 w-full h-full">Scikit-learn</div>
+                    <div class="flex items-center justify-center text-center bg-white p-4 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105 w-full h-full">PyTorch</div>
+                    <div class="flex items-center justify-center text-center bg-white p-4 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105 w-full h-full">Langchain</div>
+                    <div class="flex items-center justify-center text-center bg-white p-4 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105 w-full h-full"><i data-lucide="bar-chart-3" class="w-6 h-6 mr-2"></i>Data Viz</div>
+                    <div class="flex items-center justify-center text-center bg-white p-4 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105 w-full h-full">Feature Engineering</div>
+                    <div class="flex items-center justify-center text-center bg-white p-4 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105 w-full h-full">Web Scraping</div>
+                    <div class="flex items-center justify-center text-center bg-white p-4 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105 w-full h-full">XGBoost</div>
+                    <div class="flex items-center justify-center text-center bg-white p-4 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105 w-full h-full">NLTK</div>
+                    <div class="flex items-center justify-center text-center bg-white p-4 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105 w-full h-full">MLOps</div>
+                    <div class="flex items-center justify-center text-center bg-white p-4 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105 w-full h-full">Data Cleaning</div>
+                    <div class="flex items-center justify-center text-center bg-white p-4 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105 w-full h-full">Feature Selection</div>
+                    <div class="flex items-center justify-center text-center bg-white p-4 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105 w-full h-full"><i data-lucide="terminal" class="w-6 h-6 mr-2"></i>Linux</div>
                 </div>
                 <a href="Suraj_kumar.pdf" download
                     class="gsap-reveal bg-black hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-full text-lg btn inline-flex items-center transition-colors">
@@ -462,7 +448,8 @@
             </div>
         </section>
 
-        <section id="contact" class="py-24 bg-gray-100">
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-gray-50">
             <div class="container mx-auto px-6 text-center max-w-2xl">
                 <h2 class="gsap-reveal text-4xl font-bold mb-4 text-black">Get In Touch</h2>
                 <p class="gsap-reveal text-lg text-gray-600 mb-8">
@@ -473,39 +460,24 @@
                     Say Hello
                 </a>
                 <div class="gsap-reveal flex justify-center space-x-6 mt-12">
-                    <a href="https://github.com/surajksharma7" target="_blank" aria-label="GitHub Profile"
-                        class="text-gray-500 hover:text-black transition-transform transform hover:scale-110"><i
-                            data-lucide="github" class="w-8 h-8"></i></a>
-                    <a href="#" target="_blank" aria-label="LinkedIn Profile"
-                        class="text-gray-500 hover:text-black transition-transform transform hover:scale-110"><i
-                            data-lucide="linkedin" class="w-8 h-8"></i></a>
-                    <a href="https://leetcode.com/surajksharma7" target="_blank" aria-label="LeetCode Profile"
-                        class="text-gray-500 hover:text-black transition-transform transform hover:scale-110">
-                        <svg class="w-8 h-8" role="img" viewBox="0 0 24 24" fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg">
+                    <a href="https://github.com/surajksharma7" target="_blank" aria-label="GitHub Profile" class="text-gray-500 hover:text-black transition-transform transform hover:scale-110"><i data-lucide="github" class="w-8 h-8"></i></a>
+                    <a href="#" target="_blank" aria-label="LinkedIn Profile" class="text-gray-500 hover:text-black transition-transform transform hover:scale-110"><i data-lucide="linkedin" class="w-8 h-8"></i></a>
+                    <a href="https://leetcode.com/surajksharma7" target="_blank" aria-label="LeetCode Profile" class="text-gray-500 hover:text-black transition-transform transform hover:scale-110">
+                        <svg class="w-8 h-8" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <title>LeetCode</title>
-                            <path
-                                d="M13.48 4.26l-2.85 2.85 2.85 2.85 2.08-2.08c.6-.6.6-1.56 0-2.15l-.78-.78c-.59-.59-1.55-.59-2.15 0zm-4.33 4.33L6.3 11.44l5.3 5.3 2.85-2.85-5.3-5.3zM2 12l1.41 1.41L12 4.83 10.59 3.41 2 12zm10.59 7.17L12 20.59l8.59-8.59L19.17 10.59 12.59 17.17z" />
+                            <path d="M13.48 4.26l-2.85 2.85 2.85 2.85 2.08-2.08c.6-.6.6-1.56 0-2.15l-.78-.78c-.59-.59-1.55-.59-2.15 0zm-4.33 4.33L6.3 11.44l5.3 5.3 2.85-2.85-5.3-5.3zM2 12l1.41 1.41L12 4.83 10.59 3.41 2 12zm10.59 7.17L12 20.59l8.59-8.59L19.17 10.59 12.59 17.17z" />
                         </svg>
                     </a>
-                    <a href="https://codeforces.com/profile/surajksharma7" target="_blank"
-                        aria-label="Codeforces Profile"
-                        class="text-gray-500 hover:text-black transition-transform transform hover:scale-110">
-                        <svg class="w-8 h-8" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            xmlns="http://www.w3.org/2000/svg">
+                    <a href="https://codeforces.com/profile/surajksharma7" target="_blank" aria-label="Codeforces Profile" class="text-gray-500 hover:text-black transition-transform transform hover:scale-110">
+                        <svg class="w-8 h-8" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
                             <title>Codeforces</title>
-                            <path
-                                d="M4 10a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zM10 6a1 1 0 011-1h2a1 1 0 011 1v8a1 1 0 01-1 1h-2a1 1 0 01-1-1V6zM16 2a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V2z" />
+                            <path d="M4 10a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zM10 6a1 1 0 011-1h2a1 1 0 011 1v8a1 1 0 01-1 1h-2a1 1 0 01-1-1V6zM16 2a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V2z" />
                         </svg>
                     </a>
-                    <a href="https://medium.com/@surajksharma2304" target="_blank" aria-label="Medium Profile"
-                        class="text-gray-500 hover:text-black transition-transform transform hover:scale-110">
-                        <svg class="w-8 h-8" role="img" viewBox="0 0 24 24" fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg">
+                    <a href="https://medium.com/@surajksharma2304" target="_blank" aria-label="Medium Profile" class="text-gray-500 hover:text-black transition-transform transform hover:scale-110">
+                        <svg class="w-8 h-8" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <title>Medium</title>
-                            <path
-                                d="M7.45 2.68H4V21.32H7.45V2.68zM15.73 2.68H12.28V21.32H15.73V2.68zM24 11.63c0-4.95-3.03-9-8.27-9H17.5v2.55h-1.73c2.83 0 5.15 3.1 5.15 6.45 0 3.35-2.32 6.45-5.15 6.45H17.5v2.55h-1.77c5.24 0 8.27-4.05 8.27-9z" />
+                            <path d="M7.45 2.68H4V21.32H7.45V2.68zM15.73 2.68H12.28V21.32H15.73V2.68zM24 11.63c0-4.95-3.03-9-8.27-9H17.5v2.55h-1.73c2.83 0 5.15 3.1 5.15 6.45 0 3.35-2.32 6.45-5.15 6.45H17.5v2.55h-1.77c5.24 0 8.27-4.05 8.27-9z" />
                         </svg>
                     </a>
                 </div>
@@ -518,6 +490,45 @@
             <p>&copy; <span id="copyright-year">2025</span> Suraj Kumar. All Rights Reserved.</p>
         </div>
     </footer>
+    
+    <!-- Hidden container for full blog post content -->
+    <div id="blog-content-storage" class="hidden">
+        <div id="post1">
+            <h2>Understanding SHAP Values</h2>
+            <p class="text-gray-500 mb-8 text-base">Published on September 26, 2025</p>
+            
+            <p>In the world of machine learning, creating a highly accurate model is often only half the battle. The other, equally important half is understanding *why* the model makes the predictions it does. This is where model interpretability comes in, and one of the most powerful tools in this domain is SHAP (SHapley Additive exPlanations).</p>
+        
+            <h3>What are Shapley Values?</h3>
+            <p>At its core, SHAP is based on Shapley values, a concept from cooperative game theory. Imagine a group of players collaborating to create some value. How should they divide the payout fairly based on their individual contributions? Shapley values provide a method to do just that.</p>
+            <p>In machine learning, the "players" are the features of our dataset, and the "payout" is the model's prediction. SHAP values tell us how much each feature contributed to pushing the model's prediction away from the baseline or average prediction.</p>
+        
+            <h3>The Mathematics</h3>
+            <p>The Shapley value for a feature `i` is calculated by considering all possible subsets (coalitions) of features that don't include feature `i`. We then measure the model's output with and without feature `i` for each coalition and take a weighted average of these differences. The formula looks like this:</p>
+            <p>$$ \phi_i(v) = \sum_{S \subseteq N \setminus \{i\}} \frac{|S|!(|N|-|S|-1)!}{|N|!} [v(S \cup \{i\}) - v(S)] $$</p>
+            <p>Where:</p>
+            <ul>
+                <li>`N` is the set of all features.</li>
+                <li>`S` is a subset of features from `N`.</li>
+                <li>`v(S)` is the prediction from the model using only the features in subset `S`.</li>
+                <li>$\phi_i(v)$ is the Shapley value for feature `i`.</li>
+            </ul>
+            <p>While this formula is computationally expensive, the SHAP library uses clever approximations like KernelSHAP and TreeSHAP to make it practical for real-world machine learning models.</p>
+        </div>
+    </div>
+
+    <!-- Blog Post Modal -->
+    <div id="blog-modal" class="fixed inset-0 bg-gray-900 bg-opacity-80 z-[60] hidden items-center justify-center p-4">
+        <div id="blog-modal-content" class="bg-white w-full max-w-4xl h-full max-h-[90vh] rounded-lg shadow-2xl p-8 md:p-12 overflow-y-auto relative transition-transform duration-300 transform scale-95">
+             <button id="close-blog-modal" class="absolute top-4 right-6 text-gray-500 hover:text-black transition-colors">
+                <i data-lucide="x" class="w-8 h-8"></i>
+             </button>
+             <div id="blog-modal-body">
+                <!-- Blog content will be injected here by JavaScript -->
+             </div>
+        </div>
+    </div>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -536,12 +547,8 @@
             const cursor = document.querySelector('.cursor');
             if (cursor) {
                 const interactiveElements = document.querySelectorAll('a, button, .hover\\:-translate-y-2, .hover\\:scale-105, .hover\\:-rotate-3');
-                
-                // Center the cursor element on the pointer
                 gsap.set(cursor, {xPercent: -50, yPercent: -50});
-
                 window.addEventListener('mousemove', e => {
-                    // Instantly move the cursor without a delay
                     gsap.set(cursor, { x: e.clientX, y: e.clientY });
                 });
                 interactiveElements.forEach(el => {
@@ -552,50 +559,24 @@
 
             // --- GSAP Animations ---
             gsap.registerPlugin(ScrollTrigger);
-
             document.querySelectorAll('section').forEach(section => {
                 const revealElements = section.querySelectorAll('.gsap-reveal');
                 const revealImages = section.querySelectorAll('.gsap-reveal-img');
 
-                gsap.fromTo(revealElements,
-                    { opacity: 0, y: 50 },
-                    {
-                        scrollTrigger: {
-                            trigger: section,
-                            start: "top 80%",
-                            end: "bottom 20%",
-                            toggleActions: "play none none reverse"
-                        },
-                        opacity: 1,
-                        y: 0,
-                        stagger: 0.15,
-                        duration: 0.8,
-                        ease: 'power3.out'
-                    }
-                );
-
-                gsap.fromTo(revealImages,
-                    { opacity: 0, scale: 0.9 },
-                    {
-                        scrollTrigger: {
-                            trigger: section,
-                            start: "top 80%",
-                            end: "bottom 20%",
-                            toggleActions: "play none none reverse"
-                        },
-                        opacity: 1,
-                        scale: 1,
-                        duration: 1,
-                        ease: 'power3.out'
-                    }
-                );
+                gsap.fromTo(revealElements, { opacity: 0, y: 50 }, {
+                    scrollTrigger: { trigger: section, start: "top 80%", toggleActions: "play none none reverse" },
+                    opacity: 1, y: 0, stagger: 0.15, duration: 0.8, ease: 'power3.out'
+                });
+                gsap.fromTo(revealImages, { opacity: 0, scale: 0.9 }, {
+                    scrollTrigger: { trigger: section, start: "top 80%", toggleActions: "play none none reverse" },
+                    opacity: 1, scale: 1, duration: 1, ease: 'power3.out'
+                });
             });
 
             // Header animation
             const header = document.getElementById('header');
             ScrollTrigger.create({
-                start: 'top -80',
-                end: 99999,
+                start: 'top -80', end: 99999,
                 toggleClass: { className: 'glass-header', targets: header }
             });
 
@@ -603,7 +584,6 @@
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-
             mobileMenuButton.addEventListener('click', () => {
                 mobileMenu.classList.toggle('-translate-x-full');
                 const isHidden = mobileMenu.classList.contains('-translate-x-full');
@@ -611,7 +591,6 @@
                 lucide.createIcons();
                 document.body.style.overflow = isHidden ? '' : 'hidden';
             });
-
             mobileNavLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.add('-translate-x-full');
@@ -624,38 +603,74 @@
             // --- Project Filtering ---
             const filterButtons = document.querySelectorAll('.filter-btn');
             const projectItems = document.querySelectorAll('.project-item');
-            
             filterButtons.forEach(button => {
                 button.addEventListener('click', () => {
-                    // Handle active button styling
                     filterButtons.forEach(btn => {
                         btn.classList.remove('active-filter', 'bg-black', 'text-white');
                         btn.classList.add('bg-white', 'text-gray-700');
                     });
                     button.classList.add('active-filter', 'bg-black', 'text-white');
                     button.classList.remove('bg-white', 'text-gray-700');
-            
                     const filter = button.dataset.filter;
-            
                     projectItems.forEach(item => {
                         const itemCategories = item.dataset.category;
                         item.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
-            
                         if (filter === 'all' || (itemCategories && itemCategories.includes(filter))) {
                             item.style.display = 'grid';
-                            setTimeout(() => {
-                                item.style.opacity = '1';
-                                item.style.transform = 'scale(1)';
-                            }, 10);
+                            setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'scale(1)'; }, 10);
                         } else {
-                            item.style.opacity = '0';
-                            item.style.transform = 'scale(0.95)';
-                            setTimeout(() => {
-                                item.style.display = 'none';
-                            }, 300); // Wait for transition to finish
+                            item.style.opacity = '0'; item.style.transform = 'scale(0.95)';
+                            setTimeout(() => { item.style.display = 'none'; }, 300);
                         }
                     });
                 });
+            });
+
+            // --- Blog Modal Logic ---
+            const blogModal = document.getElementById('blog-modal');
+            const blogModalContent = document.getElementById('blog-modal-content');
+            const blogModalBody = document.getElementById('blog-modal-body');
+            const closeBlogModalBtn = document.getElementById('close-blog-modal');
+            const readMoreButtons = document.querySelectorAll('.read-more-btn');
+
+            readMoreButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const postId = button.dataset.post;
+                    const postContent = document.querySelector(`#blog-content-storage #${postId}`).innerHTML;
+                    blogModalBody.innerHTML = postContent;
+                    
+                    if (window.MathJax) {
+                        window.MathJax.typesetPromise([blogModalBody]).catch((err) => console.log('MathJax error: ', err));
+                    }
+
+                    blogModal.classList.remove('hidden');
+                    blogModal.classList.add('flex');
+                    document.body.style.overflow = 'hidden';
+                    setTimeout(() => {
+                        blogModalContent.classList.remove('scale-95');
+                    }, 10);
+                });
+            });
+
+            function closeBlogModal() {
+                blogModalContent.classList.add('scale-95');
+                 setTimeout(() => {
+                    blogModal.classList.add('hidden');
+                    blogModal.classList.remove('flex');
+                    document.body.style.overflow = '';
+                }, 300);
+            }
+
+            closeBlogModalBtn.addEventListener('click', closeBlogModal);
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !blogModal.classList.contains('hidden')) {
+                    closeBlogModal();
+                }
+            });
+            blogModal.addEventListener('click', (e) => {
+                if (e.target === blogModal) {
+                    closeBlogModal();
+                }
             });
 
             // --- Smooth Scrolling for all links ---
@@ -664,9 +679,7 @@
                     e.preventDefault();
                     const targetElement = document.querySelector(this.getAttribute('href'));
                     if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
                     }
                 });
             });
@@ -678,5 +691,4 @@
 </body>
 
 </html>
-
 

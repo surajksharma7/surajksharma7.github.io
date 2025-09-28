@@ -331,21 +331,59 @@
 
                 <div class="space-y-12">
                     <div class="project-item gsap-reveal grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
-                        data-category="ml viz">
+                        data-category="nlp ml">
                         <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-200">
+                            <img src="./projectImage/genai.png"
+                                onerror="this.onerror=null;this.src='https://placehold.co/1280x720/e5e7eb/111827?text=Project+Screenshot';"
+                                alt="DocuMind AI Study Partner Screenshot" class="rounded-md w-full object-cover">
+                        </div>
+                        <div class="text-left">
+                            <h3 class="text-3xl font-bold mb-3 text-black">DocuMind: AI Study Partner</h3>
+                            <p class="text-gray-700 mb-4 leading-relaxed">
+                                A powerful, multimodal AI study assistant built with Streamlit and GPT-4o. It allows
+                                users to upload documents (PDF, DOCX) and images to interactively ask questions,
+                                summarize content, and extract key insights from their study materials. Features a full
+                                chat interface with context management.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Streamlit</span>
+                                <span
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">OpenAI
+                                    GPT-4o</span>
+                                <span
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">LangChain</span>
+                                <span
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Python</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <a href="https://github.com/surajksharma7/documind" target="_blank"
+                                    class="font-semibold text-black hover:underline inline-flex items-center">
+                                    Live Demo <i data-lucide="external-link" class="ml-1 w-4 h-4"></i>
+                                </a>
+                                <a href="https://github.com/surajksharma7/documind" target="_blank"
+                                    class="font-semibold text-black hover:underline inline-flex items-center">
+                                    Source Code <i data-lucide="github" class="ml-1 w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item gsap-reveal grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
+                        data-category="ml viz">
+                        <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-200 md:order-2">
                             <img src="./projectImage/cancer.png"
                                 onerror="this.onerror=null;this.src='https://placehold.co/1280x720/e5e7eb/111827?text=Project+Screenshot';"
                                 alt="Breast Cancer Prediction System Screenshot" class="rounded-md w-full object-cover">
                         </div>
-                        <div class="text-left">
+                        <div class="text-left md:order-1">
                             <h3 class="text-3xl font-bold mb-3 text-black">Breast Cancer Prediction System</h3>
                             <p class="text-gray-700 mb-4 leading-relaxed">
                                 Developed a machine learning-powered web application to aid in the early detection of
                                 breast cancer. The system uses a classification model trained on tumor characteristics
                                 to predict whether a growth is benign or malignant. I built an intuitive user interface
                                 with Streamlit, enabling users to input medical measurements and receive instant,
-                                interpretable results, demonstrating a practical application of data science in
-                                healthcare.
+                                interpretable results.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-6">
                                 <span
@@ -374,20 +412,19 @@
 
                     <div class="project-item gsap-reveal grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
                         data-category="ml nlp">
-                        <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-200 md:order-2">
+                        <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-200">
                             <img src="./projectImage/laptop.png"
                                 onerror="this.onerror=null;this.src='https://placehold.co/1280x720/e5e7eb/111827?text=Project+Screenshot';"
                                 alt="Laptop Recommendation System Screenshot" class="rounded-md w-full object-cover">
                         </div>
-                        <div class="text-left md:order-1">
+                        <div class="text-left">
                             <h3 class="text-3xl font-bold mb-3 text-black">Laptop Recommendation System</h3>
                             <p class="text-gray-700 mb-4 leading-relaxed">
-                                The Laptop Recommendation System is a smart, data-driven web application that helps
-                                users find laptops tailored to their needs. By analyzing technical specifications like
-                                processor, RAM, storage, and GPU, the system converts each laptop into a numerical
+                                A smart, data-driven web application that helps
+                                users find laptops tailored to their needs. By analyzing technical specifications,
+                                the system converts each laptop into a numerical
                                 vector and calculates similarity scores to provide accurate recommendations. Built with
-                                Python and Streamlit, it offers an interactive, user-friendly interface for exploring
-                                and selecting the best laptops quickly and efficiently.
+                                Python and Streamlit, it offers an interactive interface.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-6">
                                 <span
@@ -414,6 +451,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="text-center mt-20">
                     <a href="https://github.com/surajksharma7?tab=repositories" target="_blank"
                         rel="noopener noreferrer"
@@ -424,28 +462,23 @@
             </div>
         </section>
 
-        <section id="blog" class="py-24 bg-white">
+       <section id="blog" class="py-24 bg-white">
             <div class="container mx-auto px-6 max-w-7xl">
                 <h2 class="gsap-reveal text-4xl font-bold text-center mb-12 text-black">Recent Writings</h2>
-
+                
                 <div id="blog-filters" class="gsap-reveal flex flex-wrap justify-center gap-2 md:gap-4 mb-16">
                     <button data-filter="all"
                         class="blog-filter-btn active-filter bg-black text-white font-semibold py-2 px-5 rounded-full transition-colors">All</button>
                     <button data-filter="xai"
-                        class="blog-filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">Explainable
-                        AI</button>
+                        class="blog-filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">Explainable AI</button>
                     <button data-filter="genai"
-                        class="blog-filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">Generative
-                        AI</button>
+                        class="blog-filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">Generative AI</button>
                     <button data-filter="viz"
-                        class="blog-filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">Data
-                        Visualization</button>
+                        class="blog-filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">Data Visualization</button>
                 </div>
 
                 <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                    <!-- blog 1  -->
-                    <div class="blog-item gsap-reveal bg-white p-4 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 border border-gray-200"
+                    <div class="blog-item gsap-reveal bg-gradient-to-br from-white to-slate-50 p-6 rounded-2xl border border-slate-200 transition-all duration-300 ease-in-out hover:border-black hover:shadow-2xl hover:-translate-y-2"
                         data-category="xai ml">
                         <img src="./blog/blog1.webp" alt="Blog post on Explainable AI"
                             class="w-full h-48 object-cover rounded-md mb-4">
@@ -458,17 +491,16 @@
                             <p class="text-gray-600 mb-4 text-sm leading-relaxed">
                                 Artificial Intelligence (AI) has been evolving rapidly, transforming industries and
                                 reshaping the way we interact with technology. Two of the most commonly
-                                <a href="https://surajksharma2304.medium.com/machine-learning-vs-deep-learning-whats-the-difference-b4e85922be6b"
+                                <a href="https://surajksharma2004.medium.com/machine-learning-vs-deep-learning-whats-the-difference-b4e85922be6b"
                                     target="_blank" rel="noopener noreferrer"
                                     class="font-semibold text-black hover:underline inline-flex items-center">
                                     Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
                                 </a>
+                            </p>
                         </div>
                     </div>
 
-                    <!-- this is blog 2  -->
-
-                    <div class="blog-item gsap-reveal bg-white p-4 rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2 border border-gray-200"
+                    <div class="blog-item gsap-reveal bg-gradient-to-br from-white to-slate-50 p-6 rounded-2xl border border-slate-200 transition-all duration-300 ease-in-out hover:border-black hover:shadow-2xl hover:-translate-y-2"
                         data-category="xai ml">
                         <img src="./blog/blog2.webp" alt="Blog post on Explainable AI"
                             class="w-full h-48 object-cover rounded-md mb-4">
@@ -481,65 +513,51 @@
                             <p class="text-gray-600 mb-4 text-sm leading-relaxed">
                                 Have you ever trained a machine learning model that performed spectacularly on your
                                 training data
-                                <a href="https://surajksharma2304.medium.com/taming-the-wild-model-an-introduction-to-ridge-regression-34ceaa39800c"
+                                <a href="https://surajksharma2004.medium.com/taming-the-wild-model-an-introduction-to-ridge-regression-34ceaa39800c"
                                     target="_blank" rel="noopener noreferrer"
                                     class="font-semibold text-black hover:underline inline-flex items-center">
                                     Read More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
                                 </a>
+                            </p>
                         </div>
                     </div>
-
-                    <div class="text-center mt-16">
-                        <a href="https://medium.com/@surajksharma2304" target="_blank" rel="noopener noreferrer"
-                            class="gsap-reveal bg-black hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-full text-lg inline-flex items-center transition-colors">
-                            View All Posts on Medium
-                        </a>
-                    </div>
                 </div>
+                 <div class="text-center mt-16">
+                    <a href="https://medium.com/@surajksharma2004" target="_blank" rel="noopener noreferrer"
+                        class="gsap-reveal bg-black hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-full text-lg inline-flex items-center transition-colors">
+                        View All Posts on Medium
+                    </a>
+                </div>
+            </div>
         </section>
 
 
         <section id="skills" class="py-24 bg-gray-50">
-
             <div class="container mx-auto px-6 text-center max-w-7xl">
-
                 <h2 class="gsap-reveal text-4xl font-bold mb-4 text-black">Technical Skills</h2>
-
                 <p class="gsap-reveal text-lg text-gray-600 mb-16 max-w-2xl mx-auto">
                     A curated list of the tools and technologies I use to turn data into intelligent solutions.
                 </p>
-
                 <div class="gsap-reveal grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 text-left">
-
                     <!-- AI & Machine Learning -->
                     <div class="bg-gradient-to-br from-white to-slate-50 rounded-2xl p-8 
                         transition-all duration-300 ease-in-out border border-slate-200 
                         hover:border-black hover:shadow-2xl hover:-translate-y-2">
-
                         <div class="flex items-center mb-3">
                             <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-gray-100 mr-4">
                                 <i data-lucide="brain-circuit" class="w-7 h-7 text-black"></i>
                             </div>
                             <h3 class="text-2xl font-bold text-gray-900">AI & Machine Learning</h3>
                         </div>
-
                         <p class="text-gray-600 mb-6">Building and deploying intelligent models from classical
                             algorithms to modern deep learning.</p>
-
                         <div class="flex flex-wrap gap-3">
-                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm">Deep
-                                Learning (PyTorch)</span>
-                            <span
-                                class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm">Generative
-                                AI (LLMs)</span>
-                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm">Hugging
-                                Face</span>
-                            <span
-                                class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm">Scikit-learn</span>
-                            <span
-                                class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm">XGBoost</span>
-                            <span
-                                class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm">MLOps</span>
+                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm transition-colors hover:bg-gray-200">Deep Learning (PyTorch)</span>
+                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm transition-colors hover:bg-gray-200">Generative AI (LLMs)</span>
+                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm transition-colors hover:bg-gray-200">Hugging Face</span>
+                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm transition-colors hover:bg-gray-200">Scikit-learn</span>
+                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm transition-colors hover:bg-gray-200">XGBoost</span>
+                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm transition-colors hover:bg-gray-200">MLOps</span>
                         </div>
                     </div>
 
@@ -547,31 +565,21 @@
                     <div class="bg-gradient-to-br from-white to-slate-50 rounded-2xl p-8 
                         transition-all duration-300 ease-in-out border border-slate-200 
                         hover:border-black hover:shadow-2xl hover:-translate-y-2">
-
                         <div class="flex items-center mb-3">
                             <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-gray-100 mr-4">
                                 <i data-lucide="line-chart" class="w-7 h-7 text-black"></i>
                             </div>
                             <h3 class="text-2xl font-bold text-gray-900">Data Science & Analytics</h3>
                         </div>
-
                         <p class="text-gray-600 mb-6">Wrangling, analyzing, and visualizing data to uncover actionable
                             insights.</p>
-
                         <div class="flex flex-wrap gap-3">
-                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm">Pandas &
-                                NumPy</span>
-                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm">Data
-                                Preprocessing</span>
-                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm">Feature
-                                Engineering</span>
-                            <span
-                                class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm">Matplotlib
-                                & Seaborn</span>
-                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm">Power
-                                BI</span>
-                            <span
-                                class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm">Tableau</span>
+                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm transition-colors hover:bg-gray-200">Pandas & NumPy</span>
+                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm transition-colors hover:bg-gray-200">Data Preprocessing</span>
+                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm transition-colors hover:bg-gray-200">Feature Engineering</span>
+                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm transition-colors hover:bg-gray-200">Matplotlib & Seaborn</span>
+                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm transition-colors hover:bg-gray-200">Power BI</span>
+                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm transition-colors hover:bg-gray-200">Tableau</span>
                         </div>
                     </div>
 
@@ -579,46 +587,32 @@
                     <div class="bg-gradient-to-br from-white to-slate-50 rounded-2xl p-8 
                         transition-all duration-300 ease-in-out border border-slate-200 
                         hover:border-black hover:shadow-2xl hover:-translate-y-2">
-
                         <div class="flex items-center mb-3">
                             <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-gray-100 mr-4">
                                 <i data-lucide="terminal-square" class="w-7 h-7 text-black"></i>
                             </div>
                             <h3 class="text-2xl font-bold text-gray-900">Languages & Core Tools</h3>
                         </div>
-
                         <p class="text-gray-600 mb-6">The foundational technologies that power my development workflow.
                         </p>
-
                         <div class="flex flex-wrap gap-3">
-                            <span
-                                class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm">Python</span>
-                            <span
-                                class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm">SQL</span>
-                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm">Git &
-                                GitHub</span>
-                            <span
-                                class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm">Docker</span>
-                            <span
-                                class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm">Linux/Shell</span>
-                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm">Data
-                                Structures</span>
-                                <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm">C++</span>
+                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm transition-colors hover:bg-gray-200">Python</span>
+                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm transition-colors hover:bg-gray-200">SQL</span>
+                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm transition-colors hover:bg-gray-200">Git & GitHub</span>
+                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm transition-colors hover:bg-gray-200">Docker</span>
+                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm transition-colors hover:bg-gray-200">Linux/Shell</span>
+                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm transition-colors hover:bg-gray-200">Data Structures</span>
+                            <span class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm transition-colors hover:bg-gray-200">C++</span>
                         </div>
                     </div>
-
                 </div>
-
                 <a href="./pdf/Suraj_kumar.pdf" download
                     class="gsap-reveal bg-black hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-full text-lg btn inline-flex items-center transition-colors">
                     <i data-lucide="download" class="w-5 h-5 mr-2"></i>
                     Download My Resume
                 </a>
-
             </div>
-
         </section>
-
 
 
         <section id="contact" class="py-24 bg-gray-50">

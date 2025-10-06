@@ -305,7 +305,7 @@
             </div>
         </section>
 
-        <section id="projects" class="py-24 bg-gray-100">
+        <!-- <section id="projects" class="py-24 bg-gray-100">
             <div class="container mx-auto px-6">
                 <h2 class="gsap-reveal text-4xl font-bold text-center mb-12 text-black">Featured Projects</h2>
 
@@ -460,6 +460,205 @@
                     </a>
                 </div>
             </div>
+        </section> -->
+        <section id="projects" class="py-24 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="gsap-reveal text-4xl font-bold text-center mb-12 text-black">Featured Projects</h2>
+
+                <div id="project-filters" class="gsap-reveal flex flex-wrap justify-center gap-2 md:gap-4 mb-16">
+                    <button data-filter="all"
+                        class="filter-btn active-filter bg-black text-white font-semibold py-2 px-5 rounded-full transition-colors">All</button>
+                    <button data-filter="ml"
+                        class="filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">Machine
+                        Learning</button>
+                    <button data-filter="dl"
+                        class="filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">Deep
+                        Learning</button>
+                    <button data-filter="nlp"
+                        class="filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">NLP
+                        / GenAI</button>
+                    <button data-filter="cv"
+                        class="filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">Computer
+                        Vision</button>
+                    <button data-filter="viz"
+                        class="filter-btn bg-white text-gray-700 font-semibold py-2 px-5 rounded-full transition-colors hover:bg-gray-200">Data
+                        Visualization</button>
+                </div>
+
+                <div class="space-y-12">
+                    <div class="project-item gsap-reveal grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
+                        data-category="nlp ml">
+                        <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-200">
+                            <img src="./projectImage/genai.png"
+                                onerror="this.onerror=null;this.src='https://placehold.co/1280x720/e5e7eb/111827?text=Project+Screenshot';"
+                                alt="DocuMind AI Study Partner Screenshot" class="rounded-md w-full object-cover">
+                        </div>
+                        <div class="text-left">
+                            <h3 class="text-3xl font-bold mb-3 text-black">DocuMind: AI Study Partner</h3>
+                            <p class="text-gray-700 mb-4 leading-relaxed">
+                                A powerful, multimodal AI study assistant built with Streamlit and GPT-4o. It allows
+                                users to upload documents (PDF, DOCX) and images to interactively ask questions,
+                                summarize content, and extract key insights from their study materials. Features a full
+                                chat interface with context management.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Streamlit</span>
+                                <span
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">OpenAI
+                                    GPT-4o</span>
+                                <span
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">LangChain</span>
+                                <span
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Python</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <a href="https://github.com/surajksharma7/documind" target="_blank"
+                                    class="font-semibold text-black hover:underline inline-flex items-center">
+                                    Live Demo <i data-lucide="external-link" class="ml-1 w-4 h-4"></i>
+                                </a>
+                                <a href="https://github.com/surajksharma7/documind" target="_blank"
+                                    class="font-semibold text-black hover:underline inline-flex items-center">
+                                    Source Code <i data-lucide="github" class="ml-1 w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item gsap-reveal grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
+                        data-category="ml viz">
+                        <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-200 md:order-2">
+                            <img src="./projectImage/cancer.png"
+                                onerror="this.onerror=null;this.src='https://placehold.co/1280x720/e5e7eb/111827?text=Project+Screenshot';"
+                                alt="Breast Cancer Prediction System Screenshot" class="rounded-md w-full object-cover">
+                        </div>
+                        <div class="text-left md:order-1">
+                            <h3 class="text-3xl font-bold mb-3 text-black">Breast Cancer Prediction System</h3>
+                            <p class="text-gray-700 mb-4 leading-relaxed">
+                                Developed a machine learning-powered web application to aid in the early detection of
+                                breast cancer. The system uses a classification model trained on tumor characteristics
+                                to predict whether a growth is benign or malignant. I built an intuitive user interface
+                                with Streamlit, enabling users to input medical measurements and receive instant,
+                                interpretable results.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Streamlit</span>
+                                <span
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Scikit-learn</span>
+                                <span
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Pandas</span>
+                                <span
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Plotly</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <a href="https://github.com/surajksharma7/breast-cancer-prediction-system"
+                                    target="_blank"
+                                    class="font-semibold text-black hover:underline inline-flex items-center">
+                                    Live Demo <i data-lucide="external-link" class="ml-1 w-4 h-4"></i>
+                                </a>
+                                <a href="https://github.com/surajksharma7/breast-cancer-prediction-system"
+                                    target="_blank"
+                                    class="font-semibold text-black hover:underline inline-flex items-center">
+                                    Source Code <i data-lucide="github" class="ml-1 w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item gsap-reveal grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
+                        data-category="ml nlp">
+                        <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-200">
+                            <img src="./projectImage/laptop.png"
+                                onerror="this.onerror=null;this.src='https://placehold.co/1280x720/e5e7eb/111827?text=Project+Screenshot';"
+                                alt="Laptop Recommendation System Screenshot" class="rounded-md w-full object-cover">
+                        </div>
+                        <div class="text-left">
+                            <h3 class="text-3xl font-bold mb-3 text-black">Laptop Recommendation System</h3>
+                            <p class="text-gray-700 mb-4 leading-relaxed">
+                                A smart, data-driven web application that helps
+                                users find laptops tailored to their needs. By analyzing technical specifications,
+                                the system converts each laptop into a numerical
+                                vector and calculates similarity scores to provide accurate recommendations. Built with
+                                Python and Streamlit, it offers an interactive interface.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Python</span>
+                                <span
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Streamlit</span>
+                                <span
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Data
+                                    Analysis</span>
+                                <span
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Data
+                                    Modeling</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <a href="https://github.com/surajksharma7/Laptop-Recommendation" target="_blank"
+                                    class="font-semibold text-black hover:underline inline-flex items-center">
+                                    Live Demo <i data-lucide="external-link" class="ml-1 w-4 h-4"></i>
+                                </a>
+                                <a href="https://github.com/surajksharma7/Laptop-Recommendation" target="_blank"
+                                    class="font-semibold text-black hover:underline inline-flex items-center">
+                                    Source Code <i data-lucide="github" class="ml-1 w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item gsap-reveal grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
+                        data-category="ml nlp">
+                        <div class="bg-white p-4 rounded-lg shadow-lg border border-gray-200 md:order-2">
+                            <img src="./projectImage/youtube-analysis.png"
+                                onerror="this.onerror=null;this.src='https://placehold.co/1280x720/e5e7eb/111827?text=Project+Screenshot';"
+                                alt="YouTube Comment Analysis Screenshot" class="rounded-md w-full object-cover">
+                        </div>
+                        <div class="text-left md:order-1">
+                            <h3 class="text-3xl font-bold mb-3 text-black">CommentML: YouTube Comment Analysis</h3>
+                            <p class="text-gray-700 mb-4 leading-relaxed">
+                                An automated tool that leverages NLP and machine learning to perform in-depth analysis
+                                of
+                                YouTube comments. It extracts a video's comment section to perform sentiment analysis,
+                                identify
+                                key topics, and detect potential spam. The interactive dashboard visualizes comment
+                                sentiment
+                                distribution and trending topics, offering content creators valuable audience insights.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Streamlit</span>
+                                <span
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">Scikit-learn</span>
+                                <span
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">NLTK</span>
+                                <span
+                                    class="bg-gray-200 text-gray-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">YouTube
+                                    API</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <a href="https://github.com/surajksharma7/CommentML-YoutubeAnalysis" target="_blank"
+                                    class="font-semibold text-black hover:underline inline-flex items-center">
+                                    Live Demo <i data-lucide="external-link" class="ml-1 w-4 h-4"></i>
+                                </a>
+                                <a href="https://github.com/surajksharma7/CommentML-YoutubeAnalysis" target="_blank"
+                                    class="font-semibold text-black hover:underline inline-flex items-center">
+                                    Source Code <i data-lucide="github" class="ml-1 w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="text-center mt-20">
+                    <a href="https://github.com/surajksharma7?tab=repositories" target="_blank"
+                        rel="noopener noreferrer"
+                        class="gsap-reveal bg-white hover:bg-gray-200 text-black font-bold py-3 px-8 rounded-full text-lg btn inline-flex items-center transition-colors border-2 border-gray-300">
+                        View All Projects on GitHub <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                    </a>
+                </div>
+            </div>
         </section>
 
         <section id="blog" class="py-24 bg-white">
@@ -559,7 +758,8 @@
                             algorithms to modern deep learning.</p>
                         <div class="flex flex-wrap gap-3">
                             <span
-                                class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm transition-colors hover:bg-gray-200">Machine Learning</span>
+                                class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm transition-colors hover:bg-gray-200">Machine
+                                Learning</span>
                             <span
                                 class="bg-slate-100 text-gray-700 font-medium px-4 py-2 rounded-full text-sm transition-colors hover:bg-gray-200">Deep
                                 Learning</span>
